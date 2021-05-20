@@ -39,8 +39,8 @@ this.crudService.scrolled = false
     window.scrollTo(0,0);
 
   this.ruta.data.subscribe((data)=>{this.nota = data.data; console.log(this.nota)})
-  this.urlImage = "http://192.168.43.55:3000/upload/" + this.cut(this.nota.imagen1)
-  this.urlImage2 = "http://192.168.43.55:3000/upload/" + this.cut(this.nota.imagen2)
+  this.urlImage = "https://www.quepasamiramar.com.ar/upload/" + this.cut(this.nota.imagen1)
+  this.urlImage2 = "https://www.quepasamiramar.com.ar/upload/" + this.cut(this.nota.imagen2)
   this.fecha = this.crudService.fechaPipe(new Date(this.nota.fecha))
   this.ruta.data.subscribe((data)=>{this.productos = data.dataLateral, console.log('qqq',data.dataLateral)})
 

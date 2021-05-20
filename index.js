@@ -71,13 +71,13 @@ io.on('connection', function(socket){    // abre cnx no recibe data
     
 // CREATE API
 
-app.set('port', process.env.PORT || 3100);  // tomo app e nsu propiedad .set  // paso "port" y process.env.PORT (escucha puerto por defecto)
+app.set('port', process.env.PORT || 3000);  // tomo app e nsu propiedad .set  // paso "port" y process.env.PORT (escucha puerto por defecto)
 // sino usa el 3000
 
 // Midlewares
 app.use(morgan('dev')); // morgan es una funcion, la pegamos en la propiedad use de app. y pasamos el parametro dev que indica que mostrara el mensaje por consola de desarrollo. 
 app.use(express.json()); // habilita para que el servidor entienda formato json, es una propiedad de la dependencia Express.npom
-app.use(cors('http://157.230.228.106:4200'));
+app.use(cors('http://200.58.127.191:4200'));
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({
     extended : true

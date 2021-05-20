@@ -10,9 +10,9 @@ import { of } from "rxjs"
 })
 export class CrudService {
 
-  readonly URL_API  = "http://192.168.43.55:3000/productos";
-  readonly URL_API2  = "http://192.168.43.55:3000/upload";
-  readonly URL_API3  = "http://192.168.43.55:3000/pais";
+  readonly URL_API  = "https://www.quepasamiramar.com.ar/productos";
+  readonly URL_API2  = "https://www.quepasamiramar.com.ar/upload";
+  readonly URL_API3  = "https://www.quepasamiramar.com.ar/pais";
 
   scroll:any;
   productos:Producto[]=[];
