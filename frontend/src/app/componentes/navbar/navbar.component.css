@@ -1,0 +1,103 @@
+@import url('https://fonts.googleapis.com/css2?family=Abel&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Squada+One&display=swap');
+.ColorFondo{
+     background-color: rgba(255, 255, 255);
+   background-image: url('../../../assets/bosque14.jpg') ;
+    background-repeat:no-repeat;
+   /*Color fondo barra logo*/
+  /*     */
+ }
+
+/* Boina Newsboy Cap */
+
+.imgProducto{object-fit: cover;
+    -webkit-box-shadow: 7px 10px 19px -4px rgba(0,0,0,0.75);
+    -moz-box-shadow: 7px 10px 19px -4px rgba(0,0,0,0.75);
+    box-shadow: 7px 10px 19px -4px rgba(0,0,0,0.75);
+    border-radius: 15px;
+    margin-top:-20px;
+}
+
+.logoIMG{width:220px; margin:10px 0px 10px 0px; }
+
+.contenedorNavbar {
+
+    border-radius: 4px;
+    background-color: rgb(0, 48, 56);
+   /* background-image: url('../../../assets/bosque14.jpg');   */
+  -webkit-box-shadow: 7px 10px 19px -4px rgba(0,0,0,0.75);
+  -moz-box-shadow: 7px 10px 19px -4px rgba(0,0,0,0.75);
+  box-shadow: 7px 10px 19px -4px rgba(0,0,0,0.75);
+height: 50px; }
+
+.contenedorCarrito{
+   float:right; margin-top: 4px; /*posicion del carrito de compras*/
+    height: 20px;
+
+                  }
+
+.imgScroll{display: none; }
+
+
+/* Estilos Menu Navbar*/
+ul{margin:0px; padding:0px;}
+      li {
+          display: inline;
+         }
+
+         span {margin-left:4px}
+
+.menuTexto {
+        margin-top: 5px!important;
+        font-size: 14px;
+        font-family: 'Abel', sans-serif;
+
+        letter-spacing: 2px;
+        text-decoration: none;
+        float: left;
+        padding: 10px;
+        color: rgb(255, 255, 255); /*Color texto*/
+        margin-top:3px;
+
+        text-shadow: 2px 2px 4px rgb(51, 51, 51);
+
+                }
+
+
+.activo{
+              color: rgb(187, 255, 0)  /*Color texto-activo*/
+             }
+
+
+    /* Estado Carrito */
+
+    @media  (max-width: 1000px){
+
+
+        .correccion1{margin: 0px!important}
+        .margenLeft{margin-right:20px!important}
+
+    }
+
+
+    @media  (max-width: 1000px){
+        .carritoMargenCorreccion2{margin-right:50px!important}
+        .correccion5{margin-right: 10px!important;}
+    }
+
+    @media  (max-width: 794px){
+        .carritoMargenCorreccion{margin-right:0px!important}
+
+    }
+
+
+    @media  (max-width: 594px){
+        .carritoMargenCorreccion{margin-right:0px!important}
+        .quitar1{display:none!important}
+        .contenedorNavbar{border-radius:0px!important; height: 50px;}
+    }
+
+    @media  (max-width: 1000px){
+        .mediaSocialOut{display:none}
+
+    }

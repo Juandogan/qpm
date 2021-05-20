@@ -1,0 +1,131 @@
+<div class="correccion1  animate__animated animate__fadeIn" style="margin-top:140px; margin-left: 100px; margin-right: 100px" (window:scroll)="evento($event)">
+    <!-- <div *ngIf="this.crudService.loading" align="center" style="height: 100vh">
+        <br><br><br><br>
+        <img class="loader" src="../../../assets/loading3.gif" width="20%"alt="">
+  </div>   -->
+<div  class="row" style="margin:0px; padding : 0px">
+
+
+<div class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-9">
+        <h5>#{{nota.hash}}</h5>
+        <div style="margin-top:-10px">
+        <h1 style="font-size: 45px;">{{nota.titulo}}</h1>
+    </div>
+        <h4 style="font-size: 18px;">{{nota.subtitulo}}</h4>
+<hr>
+        <div style="display: flex; justify-content: left; margin-left:25px; margin-top:-0px ; margin-bottom:0px; ">
+            <div>
+                <div  style="display:flex ; align-items: flex-start; margin-top:-5px; margin-left:-32px; margin-right: 5px" >
+                    <mat-icon  class="mr-corre mr-2 ml-2 "style="font-size:19px; color:gray">alarm</mat-icon>
+                     <div>
+                             <h3 class="subtituloResposive2 " style="font-size:11px;  margin-top:-3px; margin-left: -10px;  color:grey"><b> {{this.fecha}}</b></h3>
+                     </div>
+                </div>
+            </div>
+
+
+           <div style="margin-top:0px; margin-right: 10px;">
+
+                <div   style="display:flex ; align-items: flex-start; margin-top:-5px; margin-right: 0px" >
+                    <mat-icon class="mr-2"style="font-size:19px; color:gray">visibility</mat-icon>
+                     <div>
+                             <h3  class="subtituloResposive2" style="font-size:11px; margin-top:-3px; margin-left: -10px;  color:gray"  ><b> {{nota.vistas}}</b></h3>
+                     </div>
+                </div>
+            </div>
+
+           <div style="margin-top:0px; ">
+
+                <div   style="display:flex ; align-items: flex-start; margin-top:-5px; margin-right: 5px" >
+                    <mat-icon class="mr-2"style="font-size:19px; color:gray">account_circle</mat-icon>
+                     <div>
+                             <h3  class="subtituloResposive2" style="font-size:11px; margin-top:-3px; margin-left: -10px;  color:gray">Admin</h3>
+                     </div>
+                </div>
+            </div>
+
+            </div>
+
+<div>
+        <app-loading-image class="desktopHide" [url]="urlImage" style="width: 100%; border-radius: 4px; object-fit: cover"></app-loading-image>
+      </div>
+<div>
+  <app-loading-image  class="desktopVisble" [url]="urlImage2" style="width: 100%; border-radius: 4px; object-fit: cover"></app-loading-image>
+
+</div>
+
+
+
+        <div class="text-right">
+        <h6>Imagen: QPM</h6>
+        <hr>
+    </div>
+
+        <p class="capital descripcion"  [innerHTML]=saltos(nota.descripcion)>
+
+        el viento nos amonoto
+      </p>
+      <img src="../../../assets/mega.png" alt="" width="70px">
+        <hr>
+
+
+<button class="btn btn-dark" routerLink='/'>Volver</button>
+<div class="text-right" style="float:right; margin-top:-10px">
+    <img src="../../../assets/LogoQPMSmall.png" alt="" style="width: 80px; margin-right: 10px;">
+    <img src="../../../assets/rockola.png" alt="" width="110px">
+</div>
+        <hr>
+    <div style="display: flex; justify-content: left;">
+
+            <div>
+
+
+
+                <div  style="display:flex ; align-items: flex-start; margin-top:-5px; margin-left:-10px; margin-right: 5px" >
+                    <mat-icon class="mr-corre mr-2 ml-2 "style="font-size:19px; color:rgb(145,145,145)">facebook</mat-icon>
+                     <div>
+                             <h3 class="subtituloResposive2 " style="font-size:11px;  margin-top:-3px; margin-left: -10px;  color:rgb(0, 0, 0)">{{nota.fecha|date:'dd/MM/yyyy'}}</h3>
+                     </div>
+                </div>
+
+               </div>
+
+            <div style="margin-top:0px; margin-right: 10px;">
+
+                <div *ngIf=(nota.descripcion)  style="display:flex ; align-items: flex-start; margin-top:-5px; margin-right: 5px" >
+                    <mat-icon class="mr-2"style="font-size:19px; color:gray">account_circle</mat-icon>
+                     <div>
+                             <h3  class="subtituloResposive2" style="font-size:11px; margin-top:-3px; margin-left: -10px;  color:gray">Juan Dogan</h3>
+                     </div>
+                </div>
+            </div>
+
+            <div style="margin-top:0px; margin-right: 10px;">
+
+                    <div *ngIf=(nota.descripcion)  style="display:flex ; align-items: flex-start; margin-top:-5px; margin-right: 5px" >
+                        <mat-icon class="mr-2"style="font-size:19px; color:gray">visibility</mat-icon>
+                         <div>
+                                 <h3  class="subtituloResposive2" style="font-size:11px; margin-top:-3px; margin-left: -10px;  color:gray">{{nota.vistas}}</h3>
+                         </div>
+                    </div>
+                </div>
+
+
+            </div>
+            <hr style="margin-top:-10px">
+
+
+</div>
+
+
+ <div class="col-sm-12 col-md-12 col-lg-12 col-xl-3 desktopHide" style="background-color: rgb(255, 255, 255);">
+     <!-- <h5>tiendas virtuales</h5>  -->
+         <app-lateral [data]="this.productos|filtro:'Tienda Virtual'"></app-lateral>
+</div>
+
+
+</div>
+
+
+
+</div>

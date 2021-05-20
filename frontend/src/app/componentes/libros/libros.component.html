@@ -1,0 +1,33 @@
+<div class="correccion1" style="margin-top:138px; margin-left: 120px; margin-right: 100px" >
+             
+
+<div>
+    <div >
+        <mat-icon style="font-size:57px; float:left; margin-top:-3px">storefront</mat-icon>
+            <div style="margin-left:60px ;">
+        <h1 >Oliverio Tienda de Libros(36)</h1> 
+
+        <h4 style="margin-top:-20px">Libreria de culto</h4>
+        </div>
+    </div>
+        <hr style="margin-top:0px">
+        
+        <div *ngFor='let data of productos|filtro:"Libros"' class="row mb-3">
+          <div class="col-2" style="background-color: saddlebrown; padding: 0px">
+            <img src="http://192.168.43.55:3000/upload/{{cut(data.imagen1)}}" alt="" style="object-fit: cover; height: 300px" width="100%" >
+          </div>
+          <div class="col-6">
+            <h1>{{data.titulo}}</h1>
+            <h4 style="margin-top:-15px">Una historia del partido de General Alvarado y del pueblo de comandante nicacno otamendi</h4>
+            <h5 style="margin-top:-10px"><b> Resumen:</b></h5><p style="margin-top:-10px">Lorem ipsum dolor sit amet consectetur adipisicing elit. Rerum, reiciendis perspiciatis pariatur architecto nemo soluta ipsa aperiam! Delectus, ipsum voluptas! Officia recusandae aliquam ad perspiciatis consequatur, in vitae alias sunt.</p>
+            <h4 class="mt-3"><b>Autor: </b><span>Fernando Brittez</span></h4>
+            <h1>$750ARS</h1>
+            <h6 style="margin-top:-25px; margin-left: 15px;">Envío gratis</h6>
+            <button class="btn btn-success">Comprar</button>
+          </div>
+          
+          
+        </div>
+
+    </div> <!--    fin de correccion1 -->
+       

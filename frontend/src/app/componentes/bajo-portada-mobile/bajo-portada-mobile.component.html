@@ -1,0 +1,65 @@
+
+<div style="border-bottom: 1px solid rgb(212, 212, 212); padding-bottom:10px; margin-left:10px; margin-top:-20px">
+<div class="row" style="margin:0px; padding:0px; margin-bottom:-20px; margin-top:-10px">
+    <div class="col-4" >
+        <div style="margin-top:10px">
+
+            <img src="http://192.168.43.55:3000/upload/{{this.crudService.cut(nota.imagen2)}}" alt="" style="width: 100%; height: 106px; border-radius: 5px; object-fit: cover;">
+
+<!--
+            <app-image-with-loading image="http://192.168.43.55:3000/upload/{{this.crudService.cut(nota.imagen1)}}"
+            loader="../../../assets/loader.gif "  width="100" height="106" border="10"></app-image-with-loading>  -->
+
+
+        <!-- <img class="sombra2" src="../../../assets/osrucos.png" alt="" width="100%" style="border-radius: 5px; height: 106px; object-fit: cover; "> -->
+    </div>
+    </div>
+    <div class="col-8" style="margin:0px; padding:0px; margin-top:10px">
+        <a  style="color:black" routerLink="../articulo/{{nota._id}}" (click)="agregarVista(nota)">
+        <h1 class="fuenteTitulo truncarTitulo">{{nota.titulo}}</h1>
+        </a>
+<p class="fuenteTitulo2 truncar4" style="margin-top:-15px">{{nota.subtitulo}}</p>
+
+
+
+
+<div style="display: flex; justify-content: left; margin-left:0px; margin-top:-0px ">
+    <div>
+        <div  style="display:flex ; align-items: flex-start; margin-top:-5px; margin-left:-10px; margin-right: 5px" >
+            <mat-icon  class="mr-corre mr-2 ml-2 "style="font-size:19px; color:grey">alarm</mat-icon>
+             <div>
+                     <h3 class="subtituloResposive2 " style="font-size:11px;  margin-top:-3px; margin-left: -10px;  color:rgb(121, 121, 121)">{{this.fecha}}</h3>
+             </div>
+        </div>
+    </div>
+
+
+   <div style="margin-top:0px; margin-right: 10px;">
+
+        <div   style="display:flex ; align-items: flex-start; margin-top:-5px; margin-right: 0px" >
+            <mat-icon class="mr-2"style="font-size:19px; color:grey">visibility</mat-icon>
+             <div>
+                     <h3  class="subtituloResposive2" style="font-size:11px; margin-top:-3px; margin-left: -10px;  color:rgb(97, 97, 97)">{{nota.vistas}}</h3>
+             </div>
+        </div>
+    </div>
+
+   <div style="margin-top:0px; ">
+
+        <div   style="display:flex ; align-items: flex-start; margin-top:-5px; margin-right: 5px" >
+            <mat-icon class="mr-2"style="font-size:19px; color:grey">account_circle</mat-icon>
+             <div>
+                     <h3  class="subtituloResposive2" style="font-size:11px; margin-top:-3px; margin-left: -10px;  color:rgb(131, 131, 131)">Admin</h3>
+             </div>
+        </div>
+    </div>
+
+    </div>
+
+
+    </div>
+
+
+
+</div>
+</div>

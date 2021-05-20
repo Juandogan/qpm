@@ -1,0 +1,37 @@
+input, textarea, select {border-radius: 5px;
+    background-color: #eee;
+    border: 0;
+    outline: none;
+    font-size: 12px;
+    width: 100%;
+    margin-bottom: 10px;
+    
+    
+}  
+
+
+.mat-form-field{width: 100%; margin-top:13px}
+
+.menuTexto {
+    font-size: 13px;
+    float: left;
+    padding: 10px;
+    color: rgb(0, 0, 0); /*Color texto*/
+    margin-top:10px;
+    margin-left:3px;
+            }  ;
+a:hover{cursor:pointer}
+
+.text {
+        
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden}
+
+   
+@media  (max-width: 600px)
+{   
+    .margenArreglo{margin-left:5px!important; margin-right: 5px!important;}
+  .mtSeries{margin-top:100px!important}
+};

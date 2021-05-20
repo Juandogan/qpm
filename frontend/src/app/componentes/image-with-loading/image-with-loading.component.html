@@ -1,0 +1,8 @@
+<div class="container">
+    <div [ngStyle]="{height:height+'px',width:width+'%'}" *ngIf="isLoading" class="loading">
+      <img [src]="loader" />
+    </div>
+    <img [src]=image [ngStyle]="{visibility:isLoading?'hidden':'',height:height+'px',width:width+'%','border-radius':border+'%'}"
+    (load)="hideLoader()" (error)="hideLoader()" style="object-fit: cover;"/>
+    </div>
+    

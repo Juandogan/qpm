@@ -1,0 +1,173 @@
+
+
+  <div class="ColorFondo fixed-top" >
+    <div  class="correccion1" style="margin-left:100px">
+            <a routerLink='/'>
+                <div class="correccion1">
+
+             <img [ngClass]="{ imgScroll: this.crudService.scrolled } " src="../../../assets/LogoQPM.png" alt="" style="width:150px;">
+             <div class ="text-right quitar1"style="float:right; margin-top:20px; ">
+
+              <img [ngClass]="{ imgScroll: this.crudService.scrolled }" class="correccion5" style="margin-right:20px; margin-top:-15px " src="../../../assets/logoramon2.jpg" width="63px"alt="">
+              <img [ngClass]="{ imgScroll: this.crudService.scrolled }" class="correccion5" style="margin-right:110px;margin-top: -15px;" src="../../../assets/rockola.png" width="150px"alt="">
+
+           </div>
+
+            </div>
+            </a>
+
+
+    </div>
+
+
+        <!-- Menu -->
+        <div  class="fixed contenedorNavbar correccion1" style="margin-left:100px; margin-right: 100px">
+
+          <ul style="margin-left: 10px">
+
+            <li >
+              <div >
+                <!-- <img [ngClass]="{ imgScroll: !this.crudService.scrolled } " src="../../../assets/rockola.png" alt="" style="width:66px;">       -->
+                  <a matRipple [matRippleColor]="color" class="menuTexto" [routerLinkActive]="'activo'" style="padding-left:10px!important" [routerLinkActiveOptions]="{exact:  true}" routerLink=''>
+                        <mat-icon style="float:left; margin-top:-2px; margin-right: 0px" >stars</mat-icon>
+                         <span class="quitar1"> Inicio</span></a>
+
+                         <!-- <a matRipple [matRippleColor]="color" class="menuTexto" [routerLinkActive]="'activo'" style="padding-left:10px!important" routerLink='libros'>
+                          <mat-icon style="float:left; margin-top:-2px; margin-right: 0px ;" matBadge="$" matBadgeSize = "small" matBadgeColor="warn">storefront</mat-icon>
+                          <span class="quitar1" >Tiendas</span></a> -->
+<!--
+
+                         <a matRipple [matRippleColor]="color" class="menuTexto" [routerLinkActive]="'activo'" style="padding-left:10px!important" routerLink='catalogo'>
+                        <mat-icon style="float:left; margin-top:-2px; margin-right: 0px">library_music</mat-icon>
+                        <span class="quitar1">Cultura</span></a>
+
+
+
+
+
+
+                          <a matRipple [matRippleColor]="color" class="menuTexto" [routerLinkActive]="'activo'" style="padding-left:10px!important" routerLink='adm'>
+                            <mat-icon style="float:left; margin-top:-2px; margin-right: 0px">movie_creation</mat-icon>
+                            <span class="quitar1">Turismo</span></a> -->
+
+            </div>
+            </li>
+
+              <!-- <li>  -->
+
+              <!-- Carrito   -->
+
+
+
+
+              <div class="contenedorCarrito"  >
+                <a style="margin-top:10px" (click)="lgModal.show()">
+
+                  <!-- <mat-icon style="color: white; margin-top:6px; margin-right:10px">departure_board</mat-icon>
+<mat-icon style="color: white; margin-top:6px; margin-right:10px">search</mat-icon> -->
+
+
+</a>
+<!-- <mat-icon class="margenLeft" style="color: white; margin-top:6px; margin-right: -15px">facebook</mat-icon> -->
+                 <!-- <mat-icon style="margin-left:5px">facebook</mat-icon>  -->
+
+                <a routerLink=''>
+                <!-- <img *ngIf="this.tiendaService.imgCountry" style="margin-right: 10px; width:25px; margin-top:-18px" src="http://192.168.43.55:3000/upload/{{this.tiendaService.imgCountry}}" alt=""> -->
+
+              </a>
+
+                <div style="float:right; margin:0px; margin-top: -5px" >
+                    <div class="mediaSocialOut" >
+                  <img src="../../../assets/Vector.png" alt="" style="margin:5px; width:25px;" >
+                  <img src="../../../assets/facebo.png" alt=""  style="margin:5px;width:25px">
+                  <img src="../../../assets/what.png" alt=""  style="margin:5px;width:25px">
+                      </div>
+
+              </div>
+
+              <a routerLink='carrito' style="color:black">
+                  <!-- <mat-icon matBadge={{contador}} matBadgePosition="after" matBadgeOverlap="true" matBadgeSize="small"
+                   matBadgeColor="warn" style="margin-right: 20px">shopping_cart</mat-icon>   -->
+                </a>
+
+              </div>
+
+
+          </ul>
+        </div>
+
+      </div>
+
+<div style="overflow:hidden!important">
+
+      <div bsModal #lgModal="bs-modal" class="modal fade" tabindex="-1"
+     role="dialog" aria-labelledby="dialog-sizes-name1">
+  <div class="modal-dialog modal-lg">
+    <div class="modal-content">
+      <div class="modal-header" style="padding: 10px 10px 0px 10px">
+        <h4 id="dialog-sizes-name1" class="modal-title pull-left">  <mat-icon style="color: black">departure_board</mat-icon>Horarios</h4>
+        <button type="button" class="close pull-right" (click)="lgModal.hide()" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+
+<div>
+  <table class="table" style="margin:0px; padding:0px">
+
+    <thead style="background-color: gray; color:floralwhite">
+      <tr  >
+        <th scope="col">Nombre</th>
+        <th scope="col">Direccion</th>
+        <th scope="col" class="text-center">Telefono</th>
+
+
+      </tr>
+
+    </thead>
+
+
+      <tbody>
+        <tr>
+<th>Centro Taxi</th>
+<th>21 nº 1623 </th>
+<th class="text-center"><a href='tel:2291423303'>2291-423303</a></th>
+</tr>
+
+<tr>
+<th>Remisses Avenida</th>
+<th>23 nº 1453 </th>
+<th class="text-center"><a href='tel:02291430097'>2291-430097</a></th>
+</tr>
+
+<tr>
+  <th>Remisse Pronto</th>
+  <th>23 nº 1099 </th>
+  <th class="text-center"><a href='tel:02291420000'>2291 420000</a></th>
+  </tr>
+  <tr>
+    <th>Remisse Mitre</th>
+    <th>23 nº 970 </th>
+    <th class="text-center"><a href='tel:02291430055'>2291 430055</a></th>
+    </tr>
+
+    <tr>
+      <th>Remise Panda</th>
+      <th>Diag. Fto. Plaza nº 1476</th>
+      <th class="text-center"><a href='tel:2291430517'>2291-430517</a></th>
+      </tr>
+
+      </tbody>
+</table>
+
+</div>
+
+
+
+
+      </div>
+    </div>
+  </div>
+</div>
+
+</div>

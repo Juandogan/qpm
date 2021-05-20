@@ -1,0 +1,279 @@
+<div class="margenArreglo" style="margin-top:140px; margin-left:100px; margin-right: 100px">
+
+
+<button class="btn btn-primary mb-3" (click)="lgModal.show()">Nueva Publicacion</button>
+
+<table class="table table-sm table-success table-striped" >
+    <thead style="background-color: gray; color:floralwhite">
+      <tr  >
+        <th scope="col">Categoría</th>
+        <th scope="col">Titulo</th>
+        <th scope="col" class="text-center">Acciones</th>
+        <th scope="col" class="text-center">Vistas</th>
+
+      </tr>
+
+    </thead>
+
+    <tbody>
+      <tr *ngFor="let data of productos" >
+            <td>{{data.categoria}}</td>
+            <td>{{data.titulo|truncate:'200'}}</td>
+            <td class="text-center">
+              <div class="text-center">
+              <a (click)='borrarProducto(data)'>
+            <span   style="cursor:pointer; font-size:calc(1.5em + 0.7vw); color:brown" class="mr-2 material-icons" data-toggle="modal" data-target="#exampleModal1" >delete</span>
+          </a>
+          <a (click)='editar(data)'>
+            <span  style="cursor:pointer; font-size:calc(1.5em + 0.7vw); color:rgb(11, 128, 0)" class="material-icons" (click)="lgModal.show()" >create</span>
+          </a>
+        </div>
+            </td>
+
+          <td class="text-center">{{data.vistas}}</td>
+
+      </tr>
+    </tbody>
+
+  </table>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div bsModal #lgModal="bs-modal" class="modal fade" tabindex="-1"
+     role="dialog" aria-labelledby="dialog-sizes-name1">
+  <div class="modal-dialog modal-lg">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h1 id="dialog-sizes-name1" class="modal-title pull-left"> ADMINISTRACION</h1>
+        <button type="button" class="close pull-right" (click)="lgModal.hide()" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+
+
+
+
+
+          <form  #Form="ngForm" >
+
+              <h5 style ="margin-bottom:-4px"> Seleccione la categoría de su publicación</h5>
+                  <select id = 'categoria' (change) ="openEditor(crudService.unProducto.categoria)" type="text" class="form-control" name="categoria" #categoria="ngModel" [(ngModel)]="crudService.unProducto.categoria" placeholder="Categorias">
+
+                          <option value="Musica">Música</option>
+                          <option value="Tienda Virtual">Tienda Virtual</option>
+                          <option value="Portada">Portada</option>
+                          <option value="Cultura">Cultura</option>
+                          <option value="Turismo">Radios</option>
+                          <option value="Noticias">Teatro</option>
+                          <option value="Nota">Notas</option>
+                          <option value="Institucional">Institucional</option>
+                          <option value="Talleres">Talleres</option>
+
+                          <option value="Libros">Libros</option>
+
+
+                  </select>
+
+                  <div>
+                    <input type="hidden" name="id" class="form-control "
+                    aria-describedby="TextoHelpBlock" #id="ngModel" [(ngModel)]="this.crudService.unProducto._id" >
+                  </div>
+
+
+<div *ngIf='tituloShow'>
+    <div style="margin-top:10px">
+      <h5 style ="margin-bottom:-2px">Título</h5>
+      <input  name="titulo"  type="text" class="form-control"autocomplete="off"
+       aria-describedby="TextoHelpBlock" #titulo="ngModel" [(ngModel)]="this.crudService.unProducto.titulo">
+    </div>
+</div>
+
+
+<div *ngIf='subtituloShow'>
+        <div style="margin-top:10px">
+          <h5 style ="margin-bottom:-2px">Sub-Título</h5>
+          <input  name="subtitulo"  type="text" class="form-control"autocomplete="off"
+           aria-describedby="TextoHelpBlock" #subtitulo="ngModel" [(ngModel)]="this.crudService.unProducto.subtitulo">
+        </div>
+    </div>
+
+
+
+<div *ngIf='descripcionShow'>
+    <div style="margin-top:5px">
+                <h5 style ="margin-bottom:-2px">Descripcion</h5>
+                <textarea rows="5"  style="margin-top: 25px; margin-top:-5px" class="form-control" aria-label="With textarea" autocomplete="off"
+               name="descripcion1" #description="ngModel" #description1="ngModel" [(ngModel)]="crudService.unProducto.descripcion" placeholder="Parrafo"></textarea>
+   </div>
+
+</div>
+
+<div *ngIf='imagenShow'>
+                <div style="margin-top:20px">
+                  <div *ngIf="ocultar2">
+                    <h6 style ="margin-bottom:-2px">Imagen Portada Desktop</h6>
+                    <input type="file"  style="width: 260px; overflow: none"  (change)="onFileChange($event); ">
+                    <button class="btn-sm btn btn-dark btn-upload ml-2" (click)="this.loading2=true" (click)="onUpload()">Subir</button>
+                  </div>
+                    <div *ngIf="this.loading2">
+                           <div>
+                              <img src="../../../assets/loading4.gif"  width="50px" alt="">
+                          </div>
+
+                   </div>
+                 </div>
+
+                 <div *ngIf="this.loading3">
+                    <h6 style="color:green">✓ Imagen Portada Desktop subida!<span style="color:blue" (click)="fnOcultar()"> Deshacer</span></h6>
+
+                  </div>
+</div>
+
+
+<div *ngIf="archivoShow">
+      <div style="margin-top:0px" >
+        <div *ngIf="ocultar">
+          <h6 style ="margin-bottom:-2px">Imagen Portada Mobile</h6>
+          <input type="file"  style="width: 260px"  (change)="onFileChange($event); ">
+          <button class="btn-sm btn btn-dark btn-upload ml-2" (click)="this.loading4=true" (click)="onUpload2()">Subir</button>
+        </div>
+          <div *ngIf="this.loading4">
+              <div>
+                  <img src="../../../assets/loading4.gif"  alt="" width="50px">
+
+              </div>
+        </div>
+       </div>
+       <div *ngIf="this.loading5">
+          <h6 style="color:green">✓ Imagen Portada Mobile subida! <span style="color:blue" (click)="fnOcultar2()"> Deshacer</span></h6>
+        </div>
+
+</div>
+
+
+
+
+<div *ngIf="tituloImagenShow">
+    <div style="margin-top:10px">
+                <h5 style ="margin-bottom:-2px;">Link</h5>
+          <input  name="tituloImagen"  type="text" class="form-control" autocomplete="off"
+          aria-describedby="TextoHelpBlock" #tituloImagen="ngModel" [(ngModel)]="this.crudService.unProducto.tituloImagen">
+    </div>
+  </div>
+
+  <div *ngIf="autorShow">
+<div style="margin-top:10px">
+    <h5 style ="margin-bottom:-2px">Autor</h5>
+<input  name="imagen3"  type="text" class="form-control" autocomplete="off"
+        aria-describedby="TextoHelpBlock" #imagen4="ngModel" [(ngModel)]="this.crudService.unProducto.imagen3">
+</div>
+</div>
+
+<!-- INPUT FECHA - ACTIVIDADES - EVENTOS  - VAR: DESCRIPCION3-->
+<div *ngIf="fechaShow">
+        <div style="margin-top:10px">
+
+             <h5 style ="margin-bottom:-2px">Palabras Claves</h5>
+             <input  name="descripcion3"  autocomplete="off" type="text" class="form-control" aria-describedby="TextoHelpBlock"
+             #descripcion3="ngModel" [(ngModel)]="this.crudService.unProducto.hash">
+
+         </div>
+</div>
+
+
+<!-- INPUT HORA - ACTIVIDADES - EVENTOS  - VAR: DESCRIPCION4-->
+<div *ngIf="horaShow">
+    <div style="margin-top:10px">
+
+         <h5 style ="margin-bottom:-2px">Horario inicio/cierre</h5>
+         <input  name="descripcion4"  autocomplete="off" type="text" class="form-control" aria-describedby="TextoHelpBlock"
+         #descripcion4="ngModel" [(ngModel)]="this.crudService.unProducto.descripcion">
+
+     </div>
+</div>
+
+
+<!-- INPUT LUGAR - ACTIVIDADES - EVENTOS  - VAR: DESCRIPCION4-->
+<div *ngIf="lugarShow">
+    <div style="margin-top:10px">
+
+         <h5 style ="margin-bottom:-2px">Lugar / Ubicacion</h5>
+         <input  name="descripcion5" autocomplete="off" type="text" class="form-control" aria-describedby="TextoHelpBlock"
+         #descripcion5="ngModel" [(ngModel)]="this.crudService.unProducto.descripcion">
+
+     </div>
+</div>
+
+
+
+
+<!-- <button type="button" class="btn btn-dark mt-4" >Save</button> -->
+
+</form>
+
+ <button (click)='agregarPublicacion()'>Guardar</button>
+
+
+
+      </div>
+    </div>
+  </div>
+</div>
+<div class="modal fade" id="exampleModal1" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel1" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel1">Eliminar publicación</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <h4>¿Esta completamente seguro que desea eliminar ésta publicación?</h4>
+
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-success" data-dismiss="modal">Cancelar</button>
+        <button type="button" class="btn btn-danger "(click)='borrarProducto(this.publi2)'data-dismiss="modal" >Eliminar</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+</div>

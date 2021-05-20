@@ -1,0 +1,64 @@
+<div style="width: 100%;" >
+<div class="card sombra" style=" background-image:url('../../../assets/Fondos.jpg ');margin-top:10px; margin-right: -15px; border:none " >
+
+    <!-- background-image:url('../../../assets/osrucos.png') -->
+
+
+        <div style="margin-top:0px; margin-left:0px; margin-right:0px; background-color: rgba(0, 0, 0, 0.733)" >
+            <!-- <img class="" src="http://192.168.43.55:3000/upload/{{cut(nota.imagen1)}}" alt="Card image cap" style="padding:0px; height: 200px; object-fit: cover"> -->
+            <div class="card-body mb-4 " style="margin-top:30px; padding:0px; border:none; ">
+                <div style="margin-left: 21px;margin-top:-27px">
+                <p style="color:rgb(144, 223, 55)!important; font-size: 12px;" >#{{nota.hash}}</p>
+            </div>
+            <a style="color:rgb(255, 255, 255)" routerLink="../articulo/{{nota._id}}" (click)="agregarVista(nota)">
+              <h1 class="fuenteTitulo" style="color:rgb(255, 255, 255)">{{nota.titulo}}</h1>
+            </a>
+              <div style="margin-top:-28px;">
+                <a  routerLink="../articulo/{{nota._id}}" (click)="agregarVista(nota)">
+                <app-loadig-image2 [url]="urlImage" style="border-radius:4px;padding:10px; height: 200px; object-fit: cover!important; "></app-loadig-image2>
+                </a>
+              </div>
+               <!-- <p class="card-text fuenteTitulo2" style="color:white; font-size: 14px">Some quick example text to build on the card title</p>  -->
+              <!-- <a href="#" class="btn btn-small" style="background-color: orange; color:black">Ver más</a> -->
+            <p class="descripcion text4">{{nota.subtitulo}} </p>
+              <div style="display: flex; justify-content: left; margin-left:25px; margin-top:-0px ; margin-bottom: -40px">
+                  <div>
+                      <div  style="display:flex ; align-items: flex-start; margin-top:-5px; margin-left:-15px; margin-right: 5px" >
+                          <mat-icon  class="mr-corre mr-2 ml-2 "style="font-size:19px; color:white">alarm</mat-icon>
+                           <div>
+                                   <h3 class="subtituloResposive2 " style="font-size:11px;  margin-top:-3px; margin-left: -10px;  color:rgb(255, 255, 255)">{{this.fecha}}</h3>
+                           </div>
+                      </div>
+                  </div>
+
+
+                 <div style="margin-top:0px; margin-right: 10px;">
+
+                      <div   style="display:flex ; align-items: flex-start; margin-top:-5px; margin-right: 0px" >
+                          <mat-icon class="mr-2"style="font-size:19px; color:white">visibility</mat-icon>
+                           <div>
+                                   <h3  class="subtituloResposive2" style="font-size:11px; margin-top:-3px; margin-left: -10px;  color:rgb(255, 255, 255)">{{nota.vistas}}</h3>
+                           </div>
+                      </div>
+                  </div>
+
+                 <div style="margin-top:0px; ">
+
+                      <div   style="display:flex ; align-items: flex-start; margin-top:-5px; margin-right: 5px" >
+                          <mat-icon class="mr-2"style="font-size:19px; color:orange">account_circle</mat-icon>
+                           <div>
+                                   <h3  class="subtituloResposive2" style="font-size:11px; margin-top:-3px; margin-left: -10px;  color:orange">{{nota.imagen3}}</h3>
+                           </div>
+                      </div>
+                  </div>
+
+                  </div>
+
+
+<hr>
+            </div>
+          </div>
+
+
+  </div>
+</div>
