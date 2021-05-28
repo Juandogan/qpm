@@ -14,7 +14,7 @@ export class ClimaService {
   }
 
   async obtenerDatosDeClima(longitude: string, latitude: string) {
-    const response = await fetch(`http://www.7timer.info/bin/civillight.php?lon=${longitude}&lat=${latitude}&ac=0&unit=metric&output=json`);
+    const response = await fetch(`https://www.7timer.info/bin/civillight.php?lon=${longitude}&lat=${latitude}&ac=0&unit=metric&output=json`);
     return await response.json();
   }
 
