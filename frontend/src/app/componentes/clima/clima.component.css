@@ -1,0 +1,13 @@
+@import url('https://fonts.googleapis.com/css2?family=Exo+2:wght@200&display=swap');
+
+.max {color:rgb(255, 255, 255); margin-right:20px;font-size:12px;font-family: 'Exo 2', sans-serif;}
+.min {color:rgb(255, 255, 255); margin-right:20px;font-size:12px;font-family: 'Exo 2', sans-serif;}
+
+
+
+@media  (max-width: 594px){
+
+.max {font-size:12px; margin-right: 15px;}
+.min {font-size:12px ; margin-right: 15px;}
+
+}

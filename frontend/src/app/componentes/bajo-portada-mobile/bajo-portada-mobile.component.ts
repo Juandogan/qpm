@@ -8,9 +8,9 @@ import { CrudService } from 'src/app/servicios/crud.service';
 })
 export class BajoPortadaMobileComponent implements OnInit {
   @Input('data') nota:any;
-  
-  fecha:any;
 
+  fecha:any;
+  color:string='rgb(0, 0, 0);'
   constructor(public crudService:CrudService) { }
 
   ngOnInit(): void {
@@ -18,24 +18,24 @@ export class BajoPortadaMobileComponent implements OnInit {
   }
 
 
-  
+
  agregarVista(value){
   this.crudService.unProducto = value
 this.crudService.unProducto.vistas = this.crudService.unProducto.vistas + 1
 console.log(this.crudService.unProducto.vistas)
-if( value._id ) 
-{ 
+if( value._id )
+{
 
 this.crudService.modificarProducto(this.crudService.unProducto)
 .subscribe(res => {
-    
-                          });
-                    
-}  
 
-else  {        
+                          });
+
+}
+
+else  {
   //  this.crudService.unProducto.vistas = 0
-  //    this.crudService.addProducto(this.crudService.unProducto).subscribe(res => { console.log(res) })       
+  //    this.crudService.addProducto(this.crudService.unProducto).subscribe(res => { console.log(res) })
 }
 };
 

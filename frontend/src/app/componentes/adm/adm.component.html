@@ -137,8 +137,10 @@
 <div *ngIf='descripcionShow'>
     <div style="margin-top:5px">
                 <h5 style ="margin-bottom:-2px">Descripcion</h5>
-                <textarea rows="5"  style="margin-top: 25px; margin-top:-5px" class="form-control" aria-label="With textarea" autocomplete="off"
-               name="descripcion1" #description="ngModel" #description1="ngModel" [(ngModel)]="crudService.unProducto.descripcion" placeholder="Parrafo"></textarea>
+
+
+                <ckeditor rows="5"  style="margin-top: 25px; margin-top:-5px" class="form-control" aria-label="With textarea" autocomplete="off"
+               name="descripcion1" #description="ngModel" #description1="ngModel" [(ngModel)]="crudService.unProducto.descripcion" placeholder="Parrafo"></ckeditor>
    </div>
 
 </div>

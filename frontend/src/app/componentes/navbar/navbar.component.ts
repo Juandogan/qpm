@@ -10,10 +10,14 @@ export class NavbarComponent implements OnInit {
 color:string='rgb(255, 255, 255, 100);'
   constructor(public crudService:CrudService) { }
 
-
+clima:any
 
   ngOnInit(): void {
 
+
+    this.clima =  localStorage.getItem('clima')
+    this.clima = JSON.parse(this.clima)
+    console.log('as',this.clima)
   }
 
 }

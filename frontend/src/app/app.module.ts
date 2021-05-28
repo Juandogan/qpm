@@ -2,7 +2,7 @@ import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import {HttpClientModule} from '@angular/common/http';
 import { FormsModule } from '@angular/forms';
-
+import { CKEditorModule } from 'ckeditor4-angular';
 
 //NGX-bootstrap
 import { ButtonsModule } from 'ngx-bootstrap/buttons';
@@ -45,6 +45,8 @@ import { OliverioComponent } from './componentes/oliverio/oliverio.component';
 import { ModalComponent } from './componentes/modal/modal.component';
 import {MatRippleModule} from '@angular/material/core';
 import { PlayerComponent } from './componentes/player/player.component';
+import { ClimaComponent } from './componentes/clima/clima.component';
+import { LoadingImageLateralComponent } from './componentes/loading-image-lateral/loading-image-lateral.component';
 
 
 
@@ -73,6 +75,8 @@ import { PlayerComponent } from './componentes/player/player.component';
     OliverioComponent,
     ModalComponent,
     PlayerComponent,
+    ClimaComponent,
+    LoadingImageLateralComponent,
 
   ],
   imports: [
@@ -87,7 +91,8 @@ import { PlayerComponent } from './componentes/player/player.component';
     HttpClientModule,
     FormsModule,
     MatBadgeModule,
-    MatRippleModule
+    MatRippleModule,
+    CKEditorModule
 
   ],
   providers: [CrudService, ResolveNotaService, ResolveLateralService],

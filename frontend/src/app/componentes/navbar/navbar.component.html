@@ -9,7 +9,9 @@
              <div class ="text-right quitar1"style="float:right; margin-top:20px; ">
 
               <img [ngClass]="{ imgScroll: this.crudService.scrolled }" class="correccion5" style="margin-right:20px; margin-top:-15px " src="../../../assets/logoramon2.jpg" width="63px"alt="">
+              <a href="www.google.com.ar" target="_blank">
               <img [ngClass]="{ imgScroll: this.crudService.scrolled }" class="correccion5" style="margin-right:110px;margin-top: -15px;" src="../../../assets/rockola.png" width="150px"alt="">
+            </a>
 
            </div>
 
@@ -61,13 +63,13 @@
 
 
               <div class="contenedorCarrito"  >
-                <a style="margin-top:10px" (click)="lgModal.show()">
+
 
                   <!-- <mat-icon style="color: white; margin-top:6px; margin-right:10px">departure_board</mat-icon>
 <mat-icon style="color: white; margin-top:6px; margin-right:10px">search</mat-icon> -->
 
 
-</a>
+
 <!-- <mat-icon class="margenLeft" style="color: white; margin-top:6px; margin-right: -15px">facebook</mat-icon> -->
                  <!-- <mat-icon style="margin-left:5px">facebook</mat-icon>  -->
 
@@ -77,10 +79,13 @@
               </a>
 
                 <div style="float:right; margin:0px; margin-top: -5px" >
-                    <div class="mediaSocialOut" >
-                  <img src="../../../assets/Vector.png" alt="" style="margin:5px; width:25px;" >
-                  <img src="../../../assets/facebo.png" alt=""  style="margin:5px;width:25px">
-                  <img src="../../../assets/what.png" alt=""  style="margin:5px;width:25px">
+
+
+                    <div style="display: inline-block;">
+                      <a matRipple style="margin-top:10px" (click)="lgModal.show()">
+                      <app-clima [dia]=0></app-clima>
+                    </a>
+                  <!-- <img src="../../../assets/nube.png" alt=""  style="margin:5px;width:35px"> -->
                       </div>
 
               </div>
@@ -88,6 +93,7 @@
               <a routerLink='carrito' style="color:black">
                   <!-- <mat-icon matBadge={{contador}} matBadgePosition="after" matBadgeOverlap="true" matBadgeSize="small"
                    matBadgeColor="warn" style="margin-right: 20px">shopping_cart</mat-icon>   -->
+
                 </a>
 
               </div>
@@ -98,67 +104,42 @@
 
       </div>
 
+
+
 <div style="overflow:hidden!important">
 
       <div bsModal #lgModal="bs-modal" class="modal fade" tabindex="-1"
      role="dialog" aria-labelledby="dialog-sizes-name1">
   <div class="modal-dialog modal-lg">
-    <div class="modal-content">
-      <div class="modal-header" style="padding: 10px 10px 0px 10px">
-        <h4 id="dialog-sizes-name1" class="modal-title pull-left">  <mat-icon style="color: black">departure_board</mat-icon>Horarios</h4>
-        <button type="button" class="close pull-right" (click)="lgModal.hide()" aria-label="Close">
+    <div class="modal-content ">
+      <div class="modal-header " style="background-color: rgba(11, 97, 0, 0); padding: 10px 10px 0px 10px; border-bottom:0px">
+
+        <h4 id="dialog-sizes-name1" class="modal-title pull-left" ><h4 style="margin-left:10px;margin-top:20px; font-family: 'Exo 2', sans-serif;font-size:24px">Pronostico del tiempo</h4></h4>
+        <!-- <button type="button" class="close pull-right" (click)="lgModal.hide()" aria-label="Close">
           <span aria-hidden="true">&times;</span>
-        </button>
+        </button> -->
+<div style="float:left">
+        <img src="../../../assets/nubesol.png" alt="" width="70px" style="margin-right: 20px;">
       </div>
+      </div>
+      <h4 style="margin-top:-30px; margin-left:21px; color:gray">General Alvarado y zona</h4>
       <div class="modal-body">
-
-<div>
-  <table class="table" style="margin:0px; padding:0px">
-
-    <thead style="background-color: gray; color:floralwhite">
-      <tr  >
-        <th scope="col">Nombre</th>
-        <th scope="col">Direccion</th>
-        <th scope="col" class="text-center">Telefono</th>
+        <hr style="margin-top:-20px">
+      <h5>Hoy<span>Viernes 21 de Mayo</span></h5>
+      {{this.clima.dataseries[0].weather}}
+      <h5>Mañana</h5>
+      {{this.clima.dataseries[1].weather}}
+      {{this.clima.dataseries[2].weather}}
+      {{this.clima.dataseries[3].weather}}
 
 
-      </tr>
+    <br>
+<hr>
+      <button class="btn btn-primary">Chau</button>
+<div class="row">
 
-    </thead>
 
 
-      <tbody>
-        <tr>
-<th>Centro Taxi</th>
-<th>21 nº 1623 </th>
-<th class="text-center"><a href='tel:2291423303'>2291-423303</a></th>
-</tr>
-
-<tr>
-<th>Remisses Avenida</th>
-<th>23 nº 1453 </th>
-<th class="text-center"><a href='tel:02291430097'>2291-430097</a></th>
-</tr>
-
-<tr>
-  <th>Remisse Pronto</th>
-  <th>23 nº 1099 </th>
-  <th class="text-center"><a href='tel:02291420000'>2291 420000</a></th>
-  </tr>
-  <tr>
-    <th>Remisse Mitre</th>
-    <th>23 nº 970 </th>
-    <th class="text-center"><a href='tel:02291430055'>2291 430055</a></th>
-    </tr>
-
-    <tr>
-      <th>Remise Panda</th>
-      <th>Diag. Fto. Plaza nº 1476</th>
-      <th class="text-center"><a href='tel:2291430517'>2291-430517</a></th>
-      </tr>
-
-      </tbody>
-</table>
 
 </div>
 

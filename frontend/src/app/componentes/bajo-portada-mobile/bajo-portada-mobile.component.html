@@ -1,11 +1,11 @@
 
 <div style="border-bottom: 1px solid rgb(212, 212, 212); padding-bottom:10px; margin-left:10px; margin-top:-20px">
 <div class="row" style="margin:0px; padding:0px; margin-bottom:-20px; margin-top:-10px">
-    <div class="col-4" >
+    <div class="col-4" style="margin: 0px; padding:0px ; padding-right: 10px;">
         <div style="margin-top:10px">
-
+          <a matRipple [matRippleColor]="color" style="color:black" routerLink="../articulo/{{nota._id}}" (click)="agregarVista(nota)" >
             <img src="https://www.quepasamiramar.com.ar/upload/{{this.crudService.cut(nota.imagen2)}}" alt="" style="width: 100%; height: 106px; border-radius: 5px; object-fit: cover;">
-
+          </a>
 <!--
             <app-image-with-loading image="http://192.168.43.55:3000/upload/{{this.crudService.cut(nota.imagen1)}}"
             loader="../../../assets/loader.gif "  width="100" height="106" border="10"></app-image-with-loading>  -->
@@ -16,7 +16,7 @@
     </div>
     <div class="col-8" style="margin:0px; padding:0px; margin-top:10px">
         <a  style="color:black" routerLink="../articulo/{{nota._id}}" (click)="agregarVista(nota)">
-        <h1 class="fuenteTitulo truncarTitulo">{{nota.titulo}}</h1>
+        <h1 class="fuenteTitulo truncarTitulo" >{{nota.titulo}}</h1>
         </a>
 <p class="fuenteTitulo2 truncar4" style="margin-top:-15px">{{nota.subtitulo}}</p>
 

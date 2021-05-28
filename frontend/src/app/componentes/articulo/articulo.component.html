@@ -7,7 +7,7 @@
 
 
 <div class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-9">
-        <h5>#{{nota.hash}}</h5>
+        <h5 style="font-family: 'Exo 2', sans-serif; "><b> #{{nota.hash}}</b></h5>
         <div style="margin-top:-10px">
         <h1 style="font-size: 45px;">{{nota.titulo}}</h1>
     </div>
@@ -18,7 +18,7 @@
                 <div  style="display:flex ; align-items: flex-start; margin-top:-5px; margin-left:-32px; margin-right: 5px" >
                     <mat-icon  class="mr-corre mr-2 ml-2 "style="font-size:19px; color:gray">alarm</mat-icon>
                      <div>
-                             <h3 class="subtituloResposive2 " style="font-size:11px;  margin-top:-3px; margin-left: -10px;  color:grey"><b> {{this.fecha}}</b></h3>
+                             <h3 class="subtituloResposive2 " style="font-size:11px;  margin-top:-3px; margin-left: -10px;  color:grey;font-family: 'Exo 2', sans-serif;"><b> {{this.fecha}}</b></h3>
                      </div>
                 </div>
             </div>
@@ -27,9 +27,9 @@
            <div style="margin-top:0px; margin-right: 10px;">
 
                 <div   style="display:flex ; align-items: flex-start; margin-top:-5px; margin-right: 0px" >
-                    <mat-icon class="mr-2"style="font-size:19px; color:gray">visibility</mat-icon>
+                    <mat-icon class="mr-2"style="font-size:19px; color:gray; ">visibility</mat-icon>
                      <div>
-                             <h3  class="subtituloResposive2" style="font-size:11px; margin-top:-3px; margin-left: -10px;  color:gray"  ><b> {{nota.vistas}}</b></h3>
+                             <h3  class="subtituloResposive2" style="font-size:11px; margin-top:-3px; margin-left: -10px;  color:gray;font-family: 'Exo 2', sans-serif;"  ><b> {{nota.vistas}}</b></h3>
                      </div>
                 </div>
             </div>
@@ -39,7 +39,7 @@
                 <div   style="display:flex ; align-items: flex-start; margin-top:-5px; margin-right: 5px" >
                     <mat-icon class="mr-2"style="font-size:19px; color:gray">account_circle</mat-icon>
                      <div>
-                             <h3  class="subtituloResposive2" style="font-size:11px; margin-top:-3px; margin-left: -10px;  color:gray">Admin</h3>
+                             <h3  class="subtituloResposive2" style="font-size:11px; margin-top:-3px; margin-left: -10px;  color:gray;font-family: 'Exo 2', sans-serif;" >Admin</h3>
                      </div>
                 </div>
             </div>
@@ -63,16 +63,15 @@
 
         <p class="capital descripcion"  [innerHTML]=saltos(nota.descripcion)>
 
-        el viento nos amonoto
       </p>
       <img src="../../../assets/mega.png" alt="" width="70px">
         <hr>
 
 
-<button class="btn btn-dark" routerLink='/'>Volver</button>
+<button  class="btn btn-success" routerLink='/'>Volver</button>
 <div class="text-right" style="float:right; margin-top:-10px">
     <img src="../../../assets/LogoQPMSmall.png" alt="" style="width: 80px; margin-right: 10px;">
-    <img src="../../../assets/rockola.png" alt="" width="110px">
+    <!-- <img src="../../../assets/rockola.png" alt="" width="110px"> -->
 </div>
         <hr>
     <div style="display: flex; justify-content: left;">
@@ -120,7 +119,7 @@
 
  <div class="col-sm-12 col-md-12 col-lg-12 col-xl-3 desktopHide" style="background-color: rgb(255, 255, 255);">
      <!-- <h5>tiendas virtuales</h5>  -->
-         <app-lateral [data]="this.productos|filtro:'Tienda Virtual'"></app-lateral>
+         <app-lateral [data]="this.productos"></app-lateral>
 </div>
 
 

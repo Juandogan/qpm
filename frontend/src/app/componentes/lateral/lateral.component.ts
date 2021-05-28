@@ -8,25 +8,27 @@ import { CrudService } from 'src/app/servicios/crud.service';
   styleUrls: ['./lateral.component.css']
 })
 export class LateralComponent implements OnInit {
-  
+
   @Input('data') nota:any;
   urlImage:string;
+
   fecha:any;
+
 
   constructor(public crudService:CrudService) { }
 
   ngOnInit(): void {
-    console.log('bandera',this.nota)
-        // this.fecha = this.crudService.fechaPipe(new Date(this.nota.fecha))
-        // this.urlImage = "http://192.168.43.55:3000/upload/" + this.cut(this.nota.imagen1)
-        
-  }
-  
 
+
+    this.urlImage = "https://www.quepasamiramar.com.ar/upload/" + this.cut(this.nota[0].imagen1)
+
+        // this.fecha = this.crudService.fechaPipe(new Date(this.nota.fecha))
+
+  }
 
   cut(value:string){
     var corte = value.slice(8)
-  
+
    return corte
  };
 }

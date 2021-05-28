@@ -17,7 +17,7 @@
                   <div class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-9" style=" padding: 0px!important; margin:0px">
 
                     <div *ngFor='let producto of productos |filtro:"Portada" |filtrox4' class="animate__animated animate__fadeIn">
-                      <app-portada [data]='producto'></app-portada>
+                      <app-portada  [data]='producto'></app-portada>
 
                                     <div class="desktopVisble" style="background-color: rgb(77, 77, 77); margin-top:15px;" >
 
@@ -34,7 +34,7 @@
                                     <div *ngFor='let producto of productos|filtro:"Nota" ' class="col-12 col-sm-6 col-md-6 col-lg-4 col-xl-4" style="margin-top:20px; margin-left:-0px;">
 
                                       <div class="desktopHide">
-                                           <app-bajoportada [data]='producto' ></app-bajoportada>
+                                           <app-bajoportada  [data]='producto' ></app-bajoportada>
                                           </div>
                                           <div class="desktopVisble">
 
@@ -56,11 +56,11 @@
 <h3 style="color:rgb(255, 255, 255); background-color:rgb(77, 77, 77); margin-left:15px; font-family:
 Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;font-size:15px; margin-top: 20px;"> #Cultura (6) <a href="" style="color: rgb(0, 0, 0);">| Ver todos</a></h3>
 </div> -->
-<div class="row" style="margin:0px; padding: 0px; margin-top:3px; ">
+<!-- <div class="row" style="margin:0px; padding: 0px; margin-top:3px; "> -->
 <!-- <div *ngFor='let producto of productos|filtro:"Nota"' class="col-12 col-sm-6 col-md-6 col-lg-4 col-xl-4" >
 <app-bajo-portada-desktop [data]='producto'></app-bajo-portada-desktop>
 </div> -->
-</div>
+<!-- </div> -->
 <!-- <div style="background-color: rgb(77, 77, 77);">
   <h3 style="color:rgb(255, 255, 255); background-color:rgb(77, 77, 77); margin-left:15px; font-family:
   Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;font-size:15px; margin-top: 20px;"> #Cultura (6) <a href="" style="color: rgb(0, 0, 0);">| Ver todos</a></h3>
@@ -125,12 +125,12 @@ Cambria, Cochin, Georgia, Times, 'Times New Roman', serif; margin-left: 15px;fon
 
 
            </div><!-- row end -->
-           <div *ngFor='let producto of productos|filtro:"Nota" |filtrox1' class="col-12 col-sm-12 col-md-12 col-lg-3 col-xl-3" style="background-color: white; border-radius: 5px; margin-right: 0px!important; padding-right: 0px">
+           <!-- <div *ngFor='let producto of productos|filtro:"Nota" |filtrox1' class="col-12 col-sm-12 col-md-12 col-lg-3 col-xl-3" style="background-color: white; border-radius: 5px; margin-right: 0px!important; padding-right: 0px"> -->
              <!-- <app-bajoportada [data]='producto'></app-bajoportada> -->
-             </div>
+             <!-- </div> -->
         </div> <!-- div contenedor de todo FIN -->
 </div><!-- fin -->
- <div class=" as correccion1" >
+ <div *ngIf="!this.crudService.loading" class=" as correccion1" >
 <img src="../../../assets/bosque3.jpg" alt=""  style="width:100%; object-fit: cover;">
 </div>
 

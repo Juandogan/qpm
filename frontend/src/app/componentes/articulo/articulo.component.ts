@@ -19,8 +19,8 @@ export class ArticuloComponent implements OnInit {
   public urlImage: string;
   public urlImage2:string;
   public productos:any[];
-  public fecha:any
-
+  public fecha:any;
+  public color="rgb(255, 255, 255, 100);"
   constructor(private ruta:ActivatedRoute, public crudService:CrudService,private location: Location)
     {
     // this.nota = new Producto();

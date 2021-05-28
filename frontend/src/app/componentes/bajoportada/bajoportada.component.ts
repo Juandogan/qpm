@@ -14,31 +14,31 @@ export class BajoportadaComponent implements OnInit {
 
   ngOnInit(): void {
     this.fecha = this.crudService.fechaPipe(new Date(this.nota.fecha))
-    this.urlImage = "http://192.168.43.55:3000/upload/" + this.cut(this.nota.imagen1)
+    this.urlImage = "https://www.quepasamiramar.com.ar/upload/" + this.cut(this.nota.imagen1)
   }
   cut(value){
     var corte = value.slice(8)
-  
+
    return corte
  };
- 
+
  agregarVista(value){
   this.crudService.unProducto = value
 this.crudService.unProducto.vistas = this.crudService.unProducto.vistas + 1
 console.log(this.crudService.unProducto.vistas)
-if( value._id ) 
-{ 
+if( value._id )
+{
 
 this.crudService.modificarProducto(this.crudService.unProducto)
 .subscribe(res => {
-    
-                          });
-                    
-}  
 
-else  {        
+                          });
+
+}
+
+else  {
   //  this.crudService.unProducto.vistas = 0
-  //    this.crudService.addProducto(this.crudService.unProducto).subscribe(res => { console.log(res) })       
+  //    this.crudService.addProducto(this.crudService.unProducto).subscribe(res => { console.log(res) })
 }
 };
 }

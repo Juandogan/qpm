@@ -1,20 +1,26 @@
 
 
 
-<div class="card text-white mb-3 sombra" style="max-width: 100%; border:none; border-radius: 5px; " >
+<div *ngFor="let producto of nota |filtro:'Cultura'; let i = index " class="card text-white mb-3 sombra" style="max-width: 100%; border:none; border-radius: 5px; " >
 
-        <div class="card-body" style="background-color:rgb(133, 18, 18)">
-         <h5 style="margin-top:-12px; color:rgb(251, 255, 0)">#Tienda Virtual</h5>
+        <div class="card-body" style="padding:0px; border-radius: 5px; background-color: rgb(68, 21, 13);">
+          <app-loading-image-lateral class="desktopHide" [url]='"https://www.quepasamiramar.com.ar/upload/" + this.cut(this.producto.imagen1)' style=" border-radius: 4px; object-fit: cover; margin-top:30px; margin:0px!important"></app-loading-image-lateral>
+          <br>
+          <div style="margin-left:20px; margin-right: 20px;">
+
+         <h5 style="margin-top:-10px; color:rgb(228, 224, 21)">#{{producto.hash}}</h5>
          <!-- <h5 style="margin-top:-12px; color:wheat">Tienda Virtual</h5> -->
-          <h2 class="tituloEncima">Oliverio Tienda de Libros</h2>
-         <div style="float:left">
-         <img src="../../../assets/oliverio.PNG" width='100%' height="150px" alt="" style="border-radius: 4px">
+
+          <h2 class="tituloEncima">{{producto.titulo}}</h2>
+         <div style="float:left; ">
+
+
         </div>
          <p class="tituloEncima2" style="margin-top:-12px">Oliverio Tienda de libros, es ya una libreria de culto en miramar. Los invitamos a ingresar y mirar el catalogo de ofertas disponibles a la venta online a traves de mercado pago </p>
-         <hr style="margin-top:-5px; color:white!important">
 
+<!--
 
-         <div style="display: flex; justify-content: left; margin-left:-5px; margin-top:-0px;  ">
+         <div style="display: flex; justify-content: left; margin-left:-5px; margin-top:-0px; background-color: rgb(255, 255, 255); ">
           <div>
               <div  style="display:flex ; align-items: flex-start; margin-top:-5px; margin-left:-10px; margin-right: 5px ; margin-bottom:-20px">
                   <mat-icon  class="mr-corre mr-2 ml-3 "style="font-size:19px; color:white">alarm</mat-icon>
@@ -45,25 +51,9 @@
               </div>
           </div>
 
-          </div>
+          </div> -->
 
-
+        </div>
       </div>
     </div>
-
-
-    <div class="card text-white bg-success mb-3" style="max-width: 100%;">
-            <div class="card-body" style="background-color: rgb(187, 174, 121)">
-             <h5 style="margin-top:-12px; color:rgb(34, 2, 2)">#Publicidad</h5>
-             <a routerLink='/oliverio' >
-             <h2 class="tituloEncima sombraText" style="color:rgb(0, 0, 0);">Bodegueros</h2>
-            </a>
-             <h6 style="color:rgb(85, 55, 0) ; letter-spacing: 6px; font-size: 12px;margin-top:-15px" ><b> Vinoteca & foods</b></h6>
-             <img src="../../../assets/bodegueros.PNG" width='100%' height="190px" alt="" style="border-radius: 4px">
-             <p style="margin-top:10px" class="sombraText">Para los amantes de los buenos vinos llega esta propuesta fresca, cata especialides, y las mejores ofertas disponibles</p>
-             <span><a href="" style="color:black">Ver más..</a></span>
-          </div>
-        </div>
-
-
 

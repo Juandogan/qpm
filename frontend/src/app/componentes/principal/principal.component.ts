@@ -2,7 +2,8 @@ import { Component, OnInit, HostListener, OnDestroy } from '@angular/core';
 import { CrudService } from '../../servicios/crud.service'
 import { Producto } from '../../modelos/producto';
 import { timer, Subject,  } from 'rxjs';
-
+import { ClimaService } from 'src/app/servicios/clima.service';
+import { CKEditorModule } from 'ckeditor4-angular';
 
 
 
@@ -29,7 +30,7 @@ export class PrincipalComponent implements OnInit, OnDestroy{
     pedidoLocal:string;
     scroll:number;
 
-  constructor(public crudService:CrudService ) {
+  constructor(public crudService:CrudService, public climaService:ClimaService ) {
 
    }
 
@@ -37,7 +38,11 @@ export class PrincipalComponent implements OnInit, OnDestroy{
 
 
 
-  ngOnInit(): void {
+  async ngOnInit(){
+
+
+
+
     window.scrollTo(0,0)
 
 this.crudService.scrolled = false
@@ -46,7 +51,7 @@ this.crudService.scrolled = false
 
 const tiempo  =  timer(2000)
 tiempo.subscribe((n)=> {this.testLoading=false;
-this.crudService.loading=false
+// this.crudService.loading=false
 var az = Number(localStorage.getItem('pedidos'))
 
 window.scrollTo(0,az);
@@ -80,7 +85,7 @@ window.scrollTo(0,az);
 
 evento($event)
 {
-  if ( window.pageYOffset > 310) {
+  if ( window.pageYOffset > 110) {
     this.crudService.scrolled = true;}
     else {this.crudService.scrolled =false}
 

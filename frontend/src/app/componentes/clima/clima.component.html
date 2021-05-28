@@ -1,0 +1,29 @@
+<div class="row" style="margin-left:0px;margin-right:0px">
+
+<div class="col-6" style="margin-top: 5px;">
+<img *ngIf="this.nube" src="../../../assets/nube (2).png" alt="" width="35px">
+<img *ngIf="this.lluvia" src="../../../assets/nubelluvia.png" alt="" width="35px">
+<img *ngIf="this.sol" src="../../../assets/sol.png" alt="" width="35px" style="margin-top:3px">
+<img *ngIf="this.solnubes" src="../../../assets/nubesol.png" alt="" width="35px" style="margin-top:2x">
+</div>
+
+
+
+<div class="col-6" style="margin:0px; padding:0px">
+  <div style="margin-top:8px">
+    <div>
+      <h6 *ngIf="!this.loading" class="animate__animated animate__fadeIn max" style="margin-left:-6px">max:{{this.temMaxclima }}ºC</h6>
+
+  </div>
+
+  <div style="margin-top:-18px ">
+      <h6 *ngIf="!this.loading" class="animate__animated animate__fadeIn min" style="margin-left:-6px">min: {{this.temMinclima }}ºC</h6>
+  </div>
+
+  </div>
+
+</div>
+
+
+</div>
+
