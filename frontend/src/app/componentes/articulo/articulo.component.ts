@@ -42,7 +42,7 @@ this.crudService.scrolled = false
   this.urlImage = "https://www.quepasamiramar.com.ar/upload/" + this.cut(this.nota.imagen1)
   this.urlImage2 = "https://www.quepasamiramar.com.ar/upload/" + this.cut(this.nota.imagen2)
   this.fecha = this.crudService.fechaPipe(new Date(this.nota.fecha))
-  this.ruta.data.subscribe((data)=>{this.productos = data.dataLateral, console.log('qqq',data.dataLateral)})
+  this.ruta.data.subscribe((data)=>{this.productos = data.dataLateral, console.log('qqq',data.dataLateral), this.crudService.loading=false} )
 
 
 
@@ -83,7 +83,9 @@ evento($event)
     }
 
    saltos(data){
-    return data.split("\n").join("<br />")
+
+    var aux2 = data.split('style="width:100%"').join(' width="100%"')
+    return aux2
 
 
    };

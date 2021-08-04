@@ -34,7 +34,7 @@ export class BajoPortadaDesktopComponent implements OnInit {
  agregarVista(value){
   this.crudService.unProducto = value
 this.crudService.unProducto.vistas = this.crudService.unProducto.vistas + 1
-console.log(this.crudService.unProducto.vistas)
+
 if( value._id )
 {
 

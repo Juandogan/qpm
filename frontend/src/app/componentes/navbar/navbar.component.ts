@@ -7,8 +7,14 @@ import { CrudService } from 'src/app/servicios/crud.service';
   styleUrls: ['./navbar.component.css']
 })
 export class NavbarComponent implements OnInit {
-color:string='rgb(255, 255, 255, 100);'
-  constructor(public crudService:CrudService) { }
+
+  color:string=''
+
+  constructor(public crudService:CrudService) {
+
+  this.color='rgb(55, 55, 55);'
+
+   }
 
 clima:any
 

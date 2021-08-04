@@ -1,13 +1,35 @@
-@import url('https://fonts.googleapis.com/css2?family=Fjalla+One&display=swap');
+
+
+@import url('https://fonts.googleapis.com/css2?family=Patua+One&family=Roboto&display=swap');
+
+
+.categoria{
+  color:brown; margin-top:-15px
+}
 
 .tituloEncima{
-        font-size: 23px;
-    color:rgb(255, 255, 255);
-    margin-top:-6px;
-    font-family: 'Fjalla One', sans-serif;
+        font-size: 19px;
+        color:brown;
+         margin-top:-10px;
+         font-family: 'Patua One', cursive;
+         letter-spacing: 0px;
+         line-height: 20px;
+
 
 
       }
+
+      .ajusteMargenes{margin-left:5px; margin-right: 5px;}
+      .subtitulo{
+        color: rgb(20, 20, 20);
+        font-size: 12px;
+        line-height: 17px;
+        margin-top:-12px}
+
+
+     .forFiltro{max-width: 100%; border:none; border-radius: 5px; }
+
+      .divGeneral{padding:0px; border-radius: 5px; background-color: rgb(255, 255, 255);}
 
       .sombraText{text-shadow: 2px 4px 4px rgba(0,0,0,0.22);}
 
@@ -17,13 +39,6 @@
         box-shadow: 7px 10px 19px -4px rgba(0,0,0,0.75);  }
 
 
-      .tituloEncima2{
-
-        color: wheat;
-        font-size: 12px;
-
-
-    }
 
 
       .tituloOver{

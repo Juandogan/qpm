@@ -6,7 +6,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Exo&family=Exo+2:wght@500&display=swap');
 html{overflow: scroll;}
 html, body { height: 100%; }
-body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; zoom: 0.9; }
 
 
 .margenes{margin-left: 100px; margin-right: 100px}

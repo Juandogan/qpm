@@ -1,58 +1,30 @@
 
 
 
-<div *ngFor="let producto of nota |filtro:'Cultura'; let i = index " class="card text-white mb-3 sombra" style="max-width: 100%; border:none; border-radius: 5px; " >
+<div *ngFor="let producto of nota |filtro:'Cultura'; let i = index " class="card text-white mb-3 forFiltro" >
 
-        <div class="card-body" style="padding:0px; border-radius: 5px; background-color: rgb(68, 21, 13);">
-          <app-loading-image-lateral class="desktopHide" [url]='"https://www.quepasamiramar.com.ar/upload/" + this.cut(this.producto.imagen1)' style=" border-radius: 4px; object-fit: cover; margin-top:30px; margin:0px!important"></app-loading-image-lateral>
+        <div class="card-body divGeneral">
+          <a style="color:rgb(255, 255, 255)" routerLink="../articulo/{{producto._id}}" (click)="agregarVista(nota)">
+           <app-loading-image-lateral class="desktopHide" [url]='"https://www.quepasamiramar.com.ar/upload/" + this.cut(this.producto.imagen1)' style=" border-radius: 4px; object-fit: cover; margin-top:30px; margin:0px!important"></app-loading-image-lateral>
+        </a>
           <br>
-          <div style="margin-left:20px; margin-right: 20px;">
+          <div class="ajusteMargenes">
 
-         <h5 style="margin-top:-10px; color:rgb(228, 224, 21)">#{{producto.hash}}</h5>
-         <!-- <h5 style="margin-top:-12px; color:wheat">Tienda Virtual</h5> -->
 
+         <h5 class="categoria">{{producto.categoria}}</h5>
+         <a style="color:rgb(255, 255, 255)" routerLink="../articulo/{{producto._id}}" (click)="agregarVista(nota)">
           <h2 class="tituloEncima">{{producto.titulo}}</h2>
-         <div style="float:left; ">
+          </a>
+
+         <div style="float:left;">
 
 
         </div>
-         <p class="tituloEncima2" style="margin-top:-12px">Oliverio Tienda de libros, es ya una libreria de culto en miramar. Los invitamos a ingresar y mirar el catalogo de ofertas disponibles a la venta online a traves de mercado pago </p>
-
-<!--
-
-         <div style="display: flex; justify-content: left; margin-left:-5px; margin-top:-0px; background-color: rgb(255, 255, 255); ">
-          <div>
-              <div  style="display:flex ; align-items: flex-start; margin-top:-5px; margin-left:-10px; margin-right: 5px ; margin-bottom:-20px">
-                  <mat-icon  class="mr-corre mr-2 ml-3 "style="font-size:19px; color:white">alarm</mat-icon>
-                   <div>
-                           <h3 class="subtituloResposive2 " style="font-size:11px;  margin-top:-3px; margin-left: -10px;  color:wheat"></h3>
-                   </div>
-              </div>
-          </div>
+         <p class="subtitulo">{{producto.subtitulo}}</p>
 
 
-         <div style="margin-top:0px; margin-right: 10px;">
-
-              <div   style="display:flex ; align-items: flex-start; margin-top:-5px; margin-right: 0px" >
-                  <mat-icon class="mr-2"style="font-size:19px; color:white">visibility</mat-icon>
-                   <div>
-                           <h3  class="subtituloResposive2" style="font-size:11px; margin-top:-3px; margin-left: -10px;  color:white">3</h3>
-                   </div>
-              </div>
-          </div>
-
-         <div style="margin-top:0px; ">
-
-              <div   style="display:flex ; align-items: flex-start; margin-top:-5px; margin-right: 5px" >
-                  <mat-icon class="mr-2"style="font-size:19px; color:white">payment</mat-icon>
-                   <div>
-                           <h3  class="subtituloResposive2" style="font-size:11px; margin-top:-3px; margin-left: -10px;  color:rgb(255, 255, 255)">MercadoPago</h3>
-                   </div>
-              </div>
-          </div>
-
-          </div> -->
-
+       <app-footer-fecha [data]='producto' > </app-footer-fecha>
+<hr>
         </div>
       </div>
     </div>

@@ -3,81 +3,31 @@
 
 
 <!-- <img src="http://192.168.43.55:3000/upload/{{cut(nota.imagen1)}}" alt="" style="width: 100%; height:400px; border-radius: 4px" > -->
-<div class="sombra ">
+<div>
 <app-loading-image [url]="urlImage" style="width: 100%; border-radius: 4px;"></app-loading-image>
 <div>
-
 
 <div class="card-img-overlay paddingOff" style="padding: 0px" >
 
     <!-- Titulo encima de la oro y categoria -- sumar hashtag -->
-    <div class="corre" style="background-color: rgba(0, 0, 0, 0.699); position:relative; bottom:-1px;  margin-left:0px!important; margin-right:0px!important">
-    <div class="tituloOver" style="margin-left:20px;">
+    <div class="corre cajaTrasparente" >
 
+      <div class="tituloOver">
         <a routerLink="../articulo/{{nota._id}}" (click)="agregarVista(nota)">
-        <p class="card-text tituloEncima2 categoria" style="line-height: 30px; margin-bottom: -.5px" >#{{nota.hash}}</p>
+        <p class="card-text tituloEncima2 categoria" >#{{nota.hash}}</p>
+       </a>
 
-    </a>
 
+                <a routerLink="../articulo/{{nota._id}}" (click)="agregarVista(nota)">
 
-                <a  style="color:white" routerLink="../articulo/{{nota._id}}" (click)="agregarVista(nota)">
-
-        <h5 class="card-title tituloEncima fuenteTitulo"  >{{nota.titulo |truncate:'60'}}</h5>
+        <h5 class="text1 card-title tituloEncima fuenteTitulo "  >{{nota.titulo |truncate:'60'}}</h5>
         <br>
     </a>
-         <h5 class="fuenteSubTitulo subtitulo text1" >{{nota.subtitulo}}</h5>
+         <h5 class="subtitulo text1" >{{nota.subtitulo}}</h5>
 
-                <div style="display: flex; justify-content: left; margin-left:-5px; margin-top:-0px ">
-                        <div>
-                            <div  style="display:flex ; align-items: flex-start; margin-top:0px; margin-left:-10px; margin-right: 5px" >
-                                <mat-icon  class="mr-corre mr-2 ml-2 "style="font-size:19px; color:white">alarm</mat-icon>
-                                 <div>
-                                         <h3 class="subtituloResposive2 " style="font-size:11px;  margin-top:-3px; margin-left: -10px;  color:rgb(219, 219, 219)">{{this.fecha}}</h3>
-                                 </div>
-                            </div>
-                        </div>
-
-
-                       <div style="margin-top:5px; margin-right: 10px;; margin-left:6px">
-
-                            <div   style="display:flex ; align-items: flex-start; margin-top:-5px; margin-right: 0px" >
-                                <mat-icon class="mr-2"style="font-size:19px; color:white">visibility</mat-icon>
-                                 <div>
-                                         <h3  class="subtituloResposive2" style="font-size:11px; margin-top:-3px; margin-left: -10px;  color:white">{{nota.vistas}}</h3>
-                                 </div>
-                            </div>
-                        </div>
-
-                       <div style="margin-top:5px; ">
-
-                            <div   style="display:flex ; align-items: flex-start; margin-top:-5px; margin-right: 5px" >
-                                <mat-icon class="mr-2"style="font-size:19px; color:white">account_circle</mat-icon>
-                                 <div>
-                                         <h3  class="subtituloResposive2" style="font-size:11px; margin-top:-3px; margin-left: -10px;  color:white">Admin</h3>
-                                 </div>
-                            </div>
-                        </div>
-
-                        </div>
-
-
-
+<app-footer-fecha [data]='nota' style="color:wheat!important"></app-footer-fecha>
 
 
     </div>
       </div>
     </div>
-                         <!-- <div class="tituloOver" >
-                                <div >
-                              <h1 style="font-family: 'Roboto Slab', serif;font-size: 17px; margin-left:12px; line-height: 25px">{{nota.subtitulo}}</h1>
-                              <p>{{nota.descripcion}}</p>
-                              <a href="" style="margin-left:13px">Ver más..</a>
-                              </div>
-                              <hr>
-                            </div>
- -->
-
-                              <!-- footer fecha y autor          -->
-
-
-                             <!-- footer fecha y autor          -->

@@ -1,104 +1,102 @@
 
+<!-- CABECERA  -->
+<div class="fixed-top text-left noneDesktop">
+<a routerLink='/'>
+  <img  src="../../../assets/LogoQPM.png" alt="" width="150px">
+  </a>
+</div>
 
-  <div class="ColorFondo fixed-top" >
-    <div  class="correccion1" style="margin-left:100px">
-            <a routerLink='/'>
-                <div class="correccion1">
 
-             <img [ngClass]="{ imgScroll: this.crudService.scrolled } " src="../../../assets/LogoQPM.png" alt="" style="width:150px;">
-             <div class ="text-right quitar1"style="float:right; margin-top:20px; ">
+<div class="flex-container1 barraTopColor fixed-top">
 
-              <img [ngClass]="{ imgScroll: this.crudService.scrolled }" class="correccion5" style="margin-right:20px; margin-top:-15px " src="../../../assets/logoramon2.jpg" width="63px"alt="">
-              <a href="www.google.com.ar" target="_blank">
-              <img [ngClass]="{ imgScroll: this.crudService.scrolled }" class="correccion5" style="margin-right:110px;margin-top: -15px;" src="../../../assets/rockola.png" width="150px"alt="">
-            </a>
+  <div class="flex-container" >
+  <mat-icon class="facebook quitar1">facebook</mat-icon>
 
-           </div>
+    <span class="iconify tweet quitar1" data-inline="false" data-icon="foundation:social-twitter"></span>
+    <!-- <h1 class="quepasa quitar1" style="color:honeydew">quepasamiramar.<span style="color:rgb(66, 199, 49)">com</span>.ar</h1> -->
+    <mat-icon class="IconoBusAcomodo mr-1 poner600" [matMenuTriggerFor]="menu"> stars</mat-icon>
+<mat-menu #menu="matMenu"  yPosition="below">
+  <button mat-menu-item routerLink="/"><mat-icon>home</mat-icon>Inicio (22)</button>
+<!--
+  <button mat-menu-item><mat-icon>facebook</mat-icon>Últimas novedades (22)</button>
+  <button mat-menu-item><mat-icon>audiotrack</mat-icon>Musica</button>
+  <button mat-menu-item><mat-icon>theater_comedy</mat-icon> Teatro</button>
+  <button mat-menu-item>Inistitucionales</button>
+  <button mat-menu-item>Productores Locales</button> -->
 
-            </div>
-            </a>
+</mat-menu>
+    <!--
+        <mat-icon class="IconoBusAcomodo mr-3">audiotrack</mat-icon>
+        <mat-icon class="IconoBusAcomodo mr-1" >theater_comedy</mat-icon>
+
+
+
+
+    <mat-icon class="IconoBusAcomodo" style="font-size:35px">store</mat-icon>
+    <mat-icon class="IconoBusAcomodo" style="font-size:32px; margin-left:12 px">radio</mat-icon>
+    <mat-icon class="IconoBusAcomodo">departure_board</mat-icon> -->
+ </div>
+
+
+    <div class="clima">
+      <a  (click)="lgModal.show()">
+    <app-clima [dia]=0></app-clima>
+  </a>
+  </div>
+
+</div>
+
+<!-- CABECERA  -->
+
+
+  <div class="mt-5">
+
+<!-- LOGOS -->
+    <div class="margeleftLogo">
+
+                <div>
+                  <a routerLink='/'>
+                     <img class="imgLogoQpm quitar1" src="../../../assets/LogoQPM.png" alt="" >
+                    </a>
+                <div class ="text-right logoquepasa">
+
+                  <a href="www.google.com.ar" target="_blank">
+                 <img [ngClass]="{ imgScroll: this.crudService.scrolled }" class="correccion5 posicionLogoRamon quitar1"  src="../../../assets/logoramon2.jpg" width="63px"alt="">
+                </a>
+                 <a href="www.google.com.ar" target="_blank">
+                 <img [ngClass]="{ imgScroll: this.crudService.scrolled }" class="correccion5 posicionLogoRockola quitar1"  src="../../../assets/rockola.png" width="150px"alt="">
+                 </a>
+
+                </div>
+
+    </div>
+
 
 
     </div>
 
 
         <!-- Menu -->
-        <div  class="fixed contenedorNavbar correccion1" style="margin-left:100px; margin-right: 100px">
+        <div  class="fixed contenedorNavbar correccion1 margenesMenu" >
 
-          <ul style="margin-left: 10px">
+          <ul>
 
             <li >
-              <div >
+              <div class="flex-container1">
                 <!-- <img [ngClass]="{ imgScroll: !this.crudService.scrolled } " src="../../../assets/rockola.png" alt="" style="width:66px;">       -->
-                  <a matRipple [matRippleColor]="color" class="menuTexto" [routerLinkActive]="'activo'" style="padding-left:10px!important" [routerLinkActiveOptions]="{exact:  true}" routerLink=''>
-                        <mat-icon style="float:left; margin-top:-2px; margin-right: 0px" >stars</mat-icon>
-                         <span class="quitar1"> Inicio</span></a>
-
-                         <!-- <a matRipple [matRippleColor]="color" class="menuTexto" [routerLinkActive]="'activo'" style="padding-left:10px!important" routerLink='libros'>
-                          <mat-icon style="float:left; margin-top:-2px; margin-right: 0px ;" matBadge="$" matBadgeSize = "small" matBadgeColor="warn">storefront</mat-icon>
-                          <span class="quitar1" >Tiendas</span></a> -->
-<!--
-
-                         <a matRipple [matRippleColor]="color" class="menuTexto" [routerLinkActive]="'activo'" style="padding-left:10px!important" routerLink='catalogo'>
-                        <mat-icon style="float:left; margin-top:-2px; margin-right: 0px">library_music</mat-icon>
-                        <span class="quitar1">Cultura</span></a>
-
-
-
-
-
-
-                          <a matRipple [matRippleColor]="color" class="menuTexto" [routerLinkActive]="'activo'" style="padding-left:10px!important" routerLink='adm'>
-                            <mat-icon style="float:left; margin-top:-2px; margin-right: 0px">movie_creation</mat-icon>
-                            <span class="quitar1">Turismo</span></a> -->
-
-            </div>
-            </li>
-
-              <!-- <li>  -->
-
-              <!-- Carrito   -->
-
-
-
-
-              <div class="contenedorCarrito"  >
-
-
-                  <!-- <mat-icon style="color: white; margin-top:6px; margin-right:10px">departure_board</mat-icon>
-<mat-icon style="color: white; margin-top:6px; margin-right:10px">search</mat-icon> -->
-
-
-
-<!-- <mat-icon class="margenLeft" style="color: white; margin-top:6px; margin-right: -15px">facebook</mat-icon> -->
-                 <!-- <mat-icon style="margin-left:5px">facebook</mat-icon>  -->
-
-                <a routerLink=''>
-                <!-- <img *ngIf="this.tiendaService.imgCountry" style="margin-right: 10px; width:25px; margin-top:-18px" src="http://192.168.43.55:3000/upload/{{this.tiendaService.imgCountry}}" alt=""> -->
-
-              </a>
-
-                <div style="float:right; margin:0px; margin-top: -5px" >
-
-
-                    <div style="display: inline-block;">
-                      <a matRipple style="margin-top:10px" (click)="lgModal.show()">
-                      <app-clima [dia]=0></app-clima>
-                    </a>
-                  <!-- <img src="../../../assets/nube.png" alt=""  style="margin:5px;width:35px"> -->
+                  <a class="menuTexto" >
+                        <!-- <mat-icon style="float:left; margin-top:4px; margin-right: 0px" >stars</mat-icon> -->
+                         <span [routerLinkActive]="'activo'" [routerLinkActiveOptions]="{exact:  true}" routerLink='/' class="quitar1 menuTexto mt-1">PORTADA</span>
+                         <!-- <span class="quitar1 menuTexto mt-1 ml-2"> MUSICA</span>
+                         <span class="quitar1 menuTexto mt-1 ml-2"> Teatro</span>
+                         <span class="quitar1 menuTexto mt-1 ml-2"> Turismo</span>
+                         <span class="quitar1 menuTexto mt-1 ml-2"> Institucional</span> -->
+                        </a>
+                      <div>
+                        <app-player></app-player>
                       </div>
-
-              </div>
-
-              <a routerLink='carrito' style="color:black">
-                  <!-- <mat-icon matBadge={{contador}} matBadgePosition="after" matBadgeOverlap="true" matBadgeSize="small"
-                   matBadgeColor="warn" style="margin-right: 20px">shopping_cart</mat-icon>   -->
-
-                </a>
-
-              </div>
-
-
+                    </div>
+            </li>
           </ul>
         </div>
 
@@ -107,24 +105,22 @@
 
 
 <div style="overflow:hidden!important">
-
-      <div bsModal #lgModal="bs-modal" class="modal fade" tabindex="-1"
-     role="dialog" aria-labelledby="dialog-sizes-name1">
-  <div class="modal-dialog modal-lg">
-    <div class="modal-content ">
-      <div class="modal-header " style="background-color: rgba(11, 97, 0, 0); padding: 10px 10px 0px 10px; border-bottom:0px">
-
-        <h4 id="dialog-sizes-name1" class="modal-title pull-left" ><h4 style="margin-left:10px;margin-top:20px; font-family: 'Exo 2', sans-serif;font-size:24px">Pronostico del tiempo</h4></h4>
+  <div bsModal #lgModal="bs-modal" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="dialog-sizes-name1">
+   <div class="modal-dialog modal-lg">
+     <div class="modal-content ">
+       <div class="modal-header">
+        <h4 id="dialog-sizes-name1" class="modal-title pull-left" >
+          <h4 >Pronostico del tiempo</h4></h4>
         <!-- <button type="button" class="close pull-right" (click)="lgModal.hide()" aria-label="Close">
           <span aria-hidden="true">&times;</span>
         </button> -->
-<div style="float:left">
-        <img src="../../../assets/nubesol.png" alt="" width="70px" style="margin-right: 20px;">
+      <div>
+        <img src="../../../assets/nubesol.png" alt="" width="70px">
       </div>
       </div>
-      <h4 style="margin-top:-30px; margin-left:21px; color:gray">General Alvarado y zona</h4>
+      <h4>General Alvarado y zona</h4>
       <div class="modal-body">
-        <hr style="margin-top:-20px">
+
       <h5>Hoy<span>Viernes 21 de Mayo</span></h5>
       {{this.clima.dataseries[0].weather}}
       <h5>Mañana</h5>
@@ -135,7 +131,7 @@
 
     <br>
 <hr>
-      <button class="btn btn-primary">Chau</button>
+      <button class="btn btn-primary" (click)="lgModal.hide()">Chau</button>
 <div class="row">
 
 

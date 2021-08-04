@@ -1,12 +1,16 @@
 @import url('https://fonts.googleapis.com/css2?family=Oswald&family=Rubik:wght@300&display=swap');
 
+
+.margenGeneral{margin-top:20px; margin-left: 250px; margin-right: 250px}
+
+
 h1{
     font-family: 'Oswald', sans-serif; font-size: 40px; line-height: 45px;
     text-shadow:1px 1px 1px rgb(219, 219, 219);
 
 }
 
-p{ font-family: 'Rubik', sans-serif; font-size: 18px ; margin-top:30px}
+p{ font-size: 18px ; margin-top:30px}
 
 h4{font-size: 15px!important; margin-top:-5px; line-height: 20px;}
 
@@ -26,13 +30,14 @@ h5{color:rgb(70, 156, 0); font-size: 13px;
     float: right;
     font-family: 'Source Serif Pro', serif;
 
-    font-size: 65px;
+    font-size: 50px;
     float: left;
     margin-top: 10px;
     margin-bottom: 0px;
     margin-right: 10px;
-    line-height: 40px;
-    color:rgb(18, 105, 0)
+    line-height: 30px;
+    color:rgb(18, 105, 0);
+
   }
 
 
@@ -41,12 +46,8 @@ h5{color:rgb(70, 156, 0); font-size: 13px;
     .desktopHide{display:none!important}
 
     h1{font-size: 30px!important;     line-height: 35px!important; margin-top:-15px}
-
-h5{color:rgb(145, 145, 145); font-size: 12px!important
-
-
-
-}
+    h5{color:rgb(145, 145, 145); font-size: 12px!important}
+    .margenGeneral{margin-top:90px}
 }
 
 

@@ -4,8 +4,15 @@
  background: white;
 }
 
+.popo{ margin-top:-30px}
+.divPrincipal{
+  margin-top:148px; margin-left: 250px; margin-right: 250px;
+}
 
-
+.loaderClass{height: 1550px ; z-index: -1!important;}
+.contenedorPadre{margin:0px; padding: 0px; margin-top:-120px}
+.pm0{ padding: 0px!important; margin:0px; margin-top:0px;}
+.ml30{margin-right: 30px;}
 .text1 {
 
   display: -webkit-box;
@@ -13,6 +20,8 @@
   -webkit-box-orient: vertical;
   overflow: hidden;
 }
+
+.marginTOP{margin-top:-20px; margin-left:-0px;}
 .tituloEncima{ position:absolute;
     bottom:5px;
     font-size: 40px;
@@ -33,7 +42,8 @@
 
     .desktopVisble{display: none}
     .desktopHide{display: block;}
-
+    .separadorDesktop{height: 30px; background-color: rgb(233, 233, 233); margin-top:20px; margin-bottom: -20px;}
+    .textSeparador{margin-left:10px; color:brown; font-family: 'Exo 2', sans-serif; font-size: 15px;}
 
       .tituloOver{
 
@@ -41,21 +51,23 @@
       p{margin-top:-10px}
       h2{line-height: 20px; margin-top:-10px}
       .as{margin-left:100px; margin-right: 100px;}
-.loader{width:25%}
+      .loader{width:25%}
 
       @media  (max-width: 1000px){
 
-
-        .correccion1{margin: 0px!important}
-        .correccion1{margin-left: 0px!important}
+        .correccion1{margin-left: 0px!important; margin-right: 0px!important;}
         .loader{width:25%; margin-top:130px}
     }
 
     @media (max-width:600px){
-      .correccion1{margin-top:120px!important}
+      .loaderClass{margin-top:100px!important}
       .loader{width:70%; margin-top:60px!important}
       .desktopVisble{display: block}
       .desktopHide{display:none!important}
       .loadingResponsive{margin-top: 10px!important;}
-
+      .ml30{margin-right:0px!important}
+      .contenedorPadre{ margin-top:-150px}
+      .separadorDesktop{margin-bottom: 0px  ;}
+      .divPrincipal{margin-top:215px}
+      .popo{ margin-top:-10px}
     }

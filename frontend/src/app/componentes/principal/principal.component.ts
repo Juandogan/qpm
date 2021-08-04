@@ -34,33 +34,26 @@ export class PrincipalComponent implements OnInit, OnDestroy{
 
    }
 
-   @HostListener("scroll", ['$event'])
+  //  @HostListener("scroll", ['$event'])
 
 
 
   async ngOnInit(){
 
-
-
-
     window.scrollTo(0,0)
+    this.crudService.scrolled = false
 
-this.crudService.scrolled = false
+    const tiempo  =  timer(2000)
+    tiempo.subscribe((n)=> {this.testLoading=false;
+    var az = Number(localStorage.getItem('pedidos'))
 
-
-
-const tiempo  =  timer(2000)
-tiempo.subscribe((n)=> {this.testLoading=false;
-// this.crudService.loading=false
-var az = Number(localStorage.getItem('pedidos'))
-
-window.scrollTo(0,az);
-  this.clientes$.subscribe(data => {
-     this.scroll = Number(data)
-     if(this.scroll > 120 ){this.crudService.scrolled = false}
+     window.scrollTo(0,az);
+  //   this.clientes$.subscribe(data => {
+  //    this.scroll = Number(data)
+  //    if(this.scroll > 120 ){this.crudService.scrolled = false}
 
 
-  });
+  // });
 
 
 

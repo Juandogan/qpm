@@ -20,7 +20,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { NavbarComponent } from './componentes/navbar/navbar.component';
 import { PrincipalComponent } from './componentes/principal/principal.component';
 import { FooterComponent } from './componentes/footer/footer.component';
-
+import {MatMenuModule} from '@angular/material/menu';
 
 import { CrudService } from '../app/servicios/crud.service';
 import { AdmComponent } from './componentes/adm/adm.component';
@@ -47,6 +47,9 @@ import {MatRippleModule} from '@angular/material/core';
 import { PlayerComponent } from './componentes/player/player.component';
 import { ClimaComponent } from './componentes/clima/clima.component';
 import { LoadingImageLateralComponent } from './componentes/loading-image-lateral/loading-image-lateral.component';
+import { FooterFechaComponent } from './componentes/footer-fecha/footer-fecha.component';
+import { ImagenLoadingComponent } from './componentes/imagen-loading/imagen-loading.component';
+import { SeparadorComponent } from './componentes/separador/separador.component';
 
 
 
@@ -77,6 +80,9 @@ import { LoadingImageLateralComponent } from './componentes/loading-image-latera
     PlayerComponent,
     ClimaComponent,
     LoadingImageLateralComponent,
+    FooterFechaComponent,
+    ImagenLoadingComponent,
+    SeparadorComponent,
 
   ],
   imports: [
@@ -92,7 +98,8 @@ import { LoadingImageLateralComponent } from './componentes/loading-image-latera
     FormsModule,
     MatBadgeModule,
     MatRippleModule,
-    CKEditorModule
+    CKEditorModule,
+    MatMenuModule
 
   ],
   providers: [CrudService, ResolveNotaService, ResolveLateralService],

@@ -126,6 +126,17 @@ buscar(value: string){
 
 
           switch (value) {
+               case 'Radios':
+                this.cerrarForm()
+                this.tituloShow=true;
+                this.subtituloShow=true;
+                this.imagenShow=true;
+                this.archivoShow=true;
+                this.descripcionShow =true;
+                this.autorShow=true;
+                this.tituloImagenShow = true;
+                this.fechaShow = true;
+                  break;
 
             case 'Nota':
              this.tituloShow=true;
@@ -202,7 +213,17 @@ buscar(value: string){
             this.crudService.unProducto = producto
             this.crudService.unProducto.categoria = producto.categoria
             switch (producto.categoria) {
-
+              case 'Radios':
+                this.cerrarForm()
+                this.tituloShow=true;
+                this.subtituloShow=true;
+                this.imagenShow=true;
+                this.archivoShow=true;
+                this.descripcionShow =true;
+                this.autorShow=true;
+                this.tituloImagenShow = true;
+                this.fechaShow = true;
+                  break;
                  case 'Nota':
                   this.cerrarForm()
                   this.tituloShow=true;

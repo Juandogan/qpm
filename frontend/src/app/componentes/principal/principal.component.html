@@ -1,121 +1,121 @@
-<div  (window:scroll)="evento($event)">
+<!-- <div  (window:scroll)="evento($event)"> -->
+<div>
 
-<div  class="correccion1" style="margin-top:138px; margin-left: 100px; margin-right: 100px;"  >
+  <div *ngIf="testLoading" class="loaderClass" align="center"  >
+    <div>
+      <div class="lds-facebook"><div></div><div></div><div></div></div>
 
-    <div *ngIf="testLoading" align="center" style="height: 1550px ; z-index: -1!important;" >
-        <div>
-          <div class="lds-facebook"><div></div><div></div><div></div></div>
-          <h5 style="margin-top:-10px">Cargando..</h5>
-      </div>
   </div>
-
-
+</div>
+<div  class="correccion1 divPrincipal" >
         <div *ngIf ="!testLoading" swScrollPosition='users-loading' class="fondo "> <!-- div contenedor de todo -->
-
-           <div class="row" style="margin:0px; padding: 0px">
-
-                  <div class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-9" style=" padding: 0px!important; margin:0px">
-
-                    <div *ngFor='let producto of productos |filtro:"Portada" |filtrox4' class="animate__animated animate__fadeIn">
+           <div class="row contenedorPadre" >
+                  <div class="col-12 col-sm-12 col-md-12 col-lg-9 col-xl-9 pm0" >
+             <div *ngFor='let producto of productos |filtro:"Portada" |filtrox1' class="animate__animated animate__fadeIn ml30">
                       <app-portada  [data]='producto'></app-portada>
-
-                                    <div class="desktopVisble" style="background-color: rgb(77, 77, 77); margin-top:15px;" >
-
-
-                                    <h3 style="color:rgb(255, 255, 255); background-color:rgb(77, 77, 77); font-family:
-                                     Cambria, Cochin, Georgia, Times, 'Times New Roman', serif; margin-left: 15px;font-size:15px">
-                                     #Ultimas entradas (6) <a href="" style="color: rgb(0, 0, 0);">| Ver todos</a></h3>
-
-
-                                    </div>
-                                    <hr style="padding:0px; margin:0px; margin-top:-15px;">
-
-                                    <div class="row" style="margin-right:0px;">
-                                    <div *ngFor='let producto of productos|filtro:"Nota" ' class="col-12 col-sm-6 col-md-6 col-lg-4 col-xl-4" style="margin-top:20px; margin-left:-0px;">
-
-                                      <div class="desktopHide">
-                                           <app-bajoportada  [data]='producto' ></app-bajoportada>
-                                          </div>
-                                          <div class="desktopVisble">
-
-
-                                           <app-bajo-portada-mobile [data]='producto'></app-bajo-portada-mobile>
-
-
-                                          </div>
-
-
-                                    </div>
-                                    <br>
-                               </div>
-
-
-
-<!-- bajo bajo portada -->
-<!-- <div style="background-color: rgb(77, 77, 77);">
-<h3 style="color:rgb(255, 255, 255); background-color:rgb(77, 77, 77); margin-left:15px; font-family:
-Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;font-size:15px; margin-top: 20px;"> #Cultura (6) <a href="" style="color: rgb(0, 0, 0);">| Ver todos</a></h3>
-</div> -->
-<!-- <div class="row" style="margin:0px; padding: 0px; margin-top:3px; "> -->
-<!-- <div *ngFor='let producto of productos|filtro:"Nota"' class="col-12 col-sm-6 col-md-6 col-lg-4 col-xl-4" >
-<app-bajo-portada-desktop [data]='producto'></app-bajo-portada-desktop>
-</div> -->
-<!-- </div> -->
-<!-- <div style="background-color: rgb(77, 77, 77);">
-  <h3 style="color:rgb(255, 255, 255); background-color:rgb(77, 77, 77); margin-left:15px; font-family:
-  Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;font-size:15px; margin-top: 20px;"> #Cultura (6) <a href="" style="color: rgb(0, 0, 0);">| Ver todos</a></h3>
-  </div> -->
-
-
-
-
-<!-- ppio -->
-<!-- <br>
-<hr style="margin:0px; margin-top: -15px;">
-<div style="background-color:teal; ">
-<h3 style="color:rgb(255, 255, 255); background-color:teal; font-family:
-Cambria, Cochin, Georgia, Times, 'Times New Roman', serif; margin-left: 15px;font-size:16px"> #CINE PAMPEANO | Ver mas</h3>
-</div>
-<hr style="padding:0px; margin:0px; margin-top:-15px;">
-
-<div class="desktopHide">
-   <div class="row" style="margin-right:0px;">
-     <div *ngFor='let producto of productos|filtro:"Cultura" |filtrox1 ' class="col-12 col-sm-6 col-md-6 col-lg-4 col-xl-4" style="margin-top:5px; margin-left:0px;">
-          <app-bajoportada [data]='producto' ></app-bajoportada>
-        </div>
-      </div>
-</div>
-<div class="desktopVisble">
-  <div class="row" style="margin-right:0px;">
-    <div *ngFor='let producto of productos|filtro:"Cultura" |filtrox4 ' class="col-12 col-sm-6 col-md-6 col-lg-4 col-xl-4" style="margin-top:5px; margin-left:0px;">
-         <app-bajoportada [data]='producto' ></app-bajoportada>
-       </div>
-     </div>
-</div> -->
-                               <!-- <div class="row" style="margin:0px; padding: 0px; margin-top:3px">
-                                <div *ngFor='let producto of productos|filtro:"Nota"' class="col-12 col-sm-6 col-md-6 col-lg-4 col-xl-4" style=" margin-top:5px; padding:0px;">
                       <br>
-                                  <app-bajo-portada-mobile [data]='producto'></app-bajo-portada-mobile>
+                      <!-- <app-footer [data]='producto'></app-footer> -->
+                <app-separador [data]="'Últimas Novedades'"></app-separador>
+                        <div class="row" style="margin-right:0px; margin-top:-5px">
+                             <div *ngFor='let producto of productos|filtrox4 ' class="col-12 col-sm-6 col-md-6 col-lg-4 col-xl-4" style="margin-top:20px; margin-left:-0px;">
+                                 <div class="desktopHide">
+                                    <app-bajoportada  [data]='producto' ></app-bajoportada>
+                                </div>
+                                <div class="desktopVisble">
+                                    <app-bajo-portada-mobile [data]='producto'></app-bajo-portada-mobile>
+                                  </div>
+                              </div>
+                          </div>
+
+
+                  <app-separador [data]="'Música'"></app-separador>
+
+                  <div class="row" style="margin-right:0px; margin-top:-5px">
+                    <div *ngFor='let producto of productos|filtro:"Musica" ' class="col-12 col-sm-6 col-md-6 col-lg-4 col-xl-4" style="margin-top:20px; margin-left:-0px;">
+
+                        <div class="desktopHide">
+                           <app-bajoportada  [data]='producto' ></app-bajoportada>
+                       </div>
+
+                         <div class="desktopVisble">
+                           <app-bajo-portada-mobile [data]='producto'></app-bajo-portada-mobile>
+                         </div>
+
+                     </div>
+
+                 </div>
+
+<!-- Categoria -->
+                 <app-separador [data]="'Teatro'"></app-separador>
+
+                 <div class="row" style="margin-right:0px; margin-top:-20px">
+                   <div *ngFor='let producto of productos|filtro:"Teatro" ' class="col-12 col-sm-6 col-md-6 col-lg-4 col-xl-4" style="margin-top:20px; margin-left:-0px;">
+
+                       <div class="desktopHide">
+                          <app-bajoportada  [data]='producto' ></app-bajoportada>
+                      </div>
+
+                        <div class="desktopVisble">
+                          <app-bajo-portada-mobile [data]='producto'></app-bajo-portada-mobile>
+                        </div>
+
+                    </div>
+
+                </div>
+
+<!-- Categoria -->
+<!-- Categoria -->
+<app-separador [data]="'Radios'"></app-separador>
+
+<div class="row" style="margin-right:0px; margin-top:-20px">
+  <div *ngFor='let producto of productos|filtro:"Radio" ' class="col-12 col-sm-6 col-md-6 col-lg-4 col-xl-4" style="margin-top:20px; margin-left:-0px;">
+
+      <div class="desktopHide">
+         <app-bajoportada  [data]='producto' ></app-bajoportada>
+     </div>
+
+       <div class="desktopVisble">
+         <app-bajo-portada-mobile [data]='producto'></app-bajo-portada-mobile>
+       </div>
+
+   </div>
+
+</div>
+
+<!-- Categoria -->
+<!-- Categoria -->
+<app-separador [data]="'Libros  '"></app-separador>
+
+<div class="row" style="margin-right:0px; margin-top:-20px">
+  <div *ngFor='let producto of productos|filtro:"Libros"' class="col-12 col-sm-6 col-md-6 col-lg-4 col-xl-4" style="margin-top:20px; margin-left:-0px;">
+
+      <div class="desktopHide">
+         <app-bajoportada  [data]='producto' ></app-bajoportada>
+     </div>
+
+       <div class="desktopVisble">
+         <app-bajo-portada-mobile [data]='producto'></app-bajo-portada-mobile>
+       </div>
+
+   </div>
+
+</div>
+
+<!-- Categoria -->
 
 
 
 
 
 
-                             </div>
-
-                              </div> -->
-
-<!-- fin -->
                          </div>  <!-- fin tituloOver -->
 
 
                   </div> <!-- col End -->
 
 
-                  <div *ngIf ="!testLoading" class="col-12 col-sm-12 col-md-12 col-lg-3 col-xl-3 desktopHide" style="background-color: white; border-radius: 5px; margin-right: 0px!important; padding-right: 15px">
-
-                         <app-lateral [data]='productos'></app-lateral>
+                  <div *ngIf ="!testLoading" class="col-12 col-sm-12 col-md-12 col-lg-3 col-xl-3 desktopHide" style="background-color: white; border-radius: 5px; margin-right: 0px!important; padding-right: 15px; ">
+                  <app-lateral [data]='productos'></app-lateral>
 
 
                   </div>       <!-- fin de colo -->
@@ -130,9 +130,6 @@ Cambria, Cochin, Georgia, Times, 'Times New Roman', serif; margin-left: 15px;fon
              <!-- </div> -->
         </div> <!-- div contenedor de todo FIN -->
 </div><!-- fin -->
- <div *ngIf="!this.crudService.loading" class=" as correccion1" >
-<img src="../../../assets/bosque3.jpg" alt=""  style="width:100%; object-fit: cover;">
-</div>
 
 
 

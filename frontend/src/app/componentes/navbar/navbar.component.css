@@ -1,14 +1,35 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Abel&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Squada+One&display=swap');
-.ColorFondo{
-     background-color: rgba(255, 255, 255);
-   background-image: url('../../../assets/bosque14.jpg') ;
-    background-repeat:no-repeat;
-   /*Color fondo barra logo*/
-  /*     */
- }
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Pangolin&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Sunflower:wght@500&display=swap');
 
+
+.noneDesktop{display:none; background-color: white; }
+.IconoBusAcomodo{color:white; margin-left:15px; font-size: 30px; margin-top:5px}
+.barraTop{font-family: 'Pangolin', cursive;
+  color: #AAA; padding: 5px; font-weight: bold;
+}
+
+.poner600{display:none}
+.barraTopColor{background-color:hsl(0, 0%, 18%); height:40px; }
+
+/* ICONOS REDES SOCIALES */
+.facebook{color:#f1f1f1; font-size:30px; margin-top:4px; margin-left:250px;}
+.tweet{margin-left:10px; margin-top:2px; font-size: 35px; color:rgb(241, 241, 241)}
+.clima{margin-top:-6px; margin-right: 250px;}
+/* ICONOS REDES SOCIALES */
+
+.margeleftLogo{margin-left:100px}
+.imgLogoQpm{width:150px;margin-left:140px;margin-top:0px}
+.logoquepasa{float:right; margin-top:20px; color:whitesmoke}
+.ColorFondo{background-color: rgb(255, 255, 255); }
+
+ .posicionLogoRamon{margin-top:-20px; margin-right:20px;}
+.posicionLogoRockola{margin-right:260px;margin-top:-15px}
 /* Boina Newsboy Cap */
+.margenesMenu{margin-left:250px; margin-right: 250px}
 
 h5{font-family: 'Exo 2', sans-serif; font-size: 15px;}
 span{font-family: 'Exo 2', sans-serif;}
@@ -21,17 +42,18 @@ span{font-family: 'Exo 2', sans-serif;}
     margin-top:-20px;
 }
 
+.quepasa{font-family: 'Sunflower', sans-serif;  font-size:27px; margin-left:10px; margin-top:1px }
 .logoIMG{width:220px; margin:10px 0px 10px 0px; }
 
 .contenedorNavbar {
 
     border-radius: 4px;
-    background-color: rgb(0, 48, 56);
+    background-color: rgba(196, 196, 196, 0.24);
    /* background-image: url('../../../assets/bosque14.jpg');   */
-  -webkit-box-shadow: 7px 10px 19px -4px rgba(0,0,0,0.75);
-  -moz-box-shadow: 7px 10px 19px -4px rgba(0,0,0,0.75);
-  box-shadow: 7px 10px 19px -4px rgba(0,0,0,0.75);
-height: 50px; }
+
+height: 50px;
+
+}
 
 .contenedorCarrito{
    float:right; margin-top: 4px; /*posicion del carrito de compras*/
@@ -43,7 +65,7 @@ height: 50px; }
 
 
 /* Estilos Menu Navbar*/
-ul{margin:0px; padding:0px;}
+ul{margin:0px; padding:0px;margin-left: 10px}
       li {
           display: inline;
          }
@@ -51,28 +73,148 @@ ul{margin:0px; padding:0px;}
          span {margin-left:4px}
 
 .menuTexto {
-        margin-top: 5px!important;
-        font-size: 14px;
-        font-family: 'Abel', sans-serif;
-
-        letter-spacing: 2px;
+        margin-top: 6px!important;
+        font-size: 20px;
+        font-family: 'Bebas Neue', cursive;
         text-decoration: none;
         float: left;
-        padding: 10px;
-        color: rgb(255, 255, 255); /*Color texto*/
+        padding: 2px;
+        color: rgb(0, 0, 0); /*Color texto*/
         margin-top:3px;
+        cursor: pointer;
+                }
+                .padleft{padding-left:10px!important}
+                .menuTexto :active {
 
-        text-shadow: 2px 2px 4px rgb(51, 51, 51);
-
+                  background-color: rgb(0, 0, 0); /*Color texto*/
+                  color:aliceblue;
+                  border-radius: 5px;
                 }
 
 
+
+
+
 .activo{
-              color: rgb(187, 255, 0)  /*Color texto-activo*/
+              color: rgb(160, 24, 0)  /*Color texto-activo*/
              }
+
+             .flex-container {
+              display: -ms-flexbox;
+              display: -webkit-flex;
+              display: flex;
+              -webkit-flex-direction: row;
+              -ms-flex-direction: row;
+              flex-direction: row;
+              -webkit-flex-wrap: nowrap;
+              -ms-flex-wrap: nowrap;
+              flex-wrap: nowrap;
+              -webkit-justify-content: flex-start;
+              -ms-flex-pack: start;
+              justify-content: flex-start;
+              -webkit-align-content: stretch;
+              -ms-flex-line-pack: stretch;
+              align-content: stretch;
+              }
+
+          .flex-item:nth-child(1) {
+              -webkit-order: 0;
+              -ms-flex-order: 0;
+              order: 0;
+              -webkit-flex: 0 1 auto;
+              -ms-flex: 0 1 auto;
+              flex: 0 1 auto;
+              -webkit-align-self: auto;
+              -ms-flex-item-align: auto;
+              align-self: auto;
+              }
+
+          .flex-item:nth-child(2) {
+              -webkit-order: 0;
+              -ms-flex-order: 0;
+              order: 0;
+              -webkit-flex: 0 1 auto;
+              -ms-flex: 0 1 auto;
+              flex: 0 1 auto;
+              -webkit-align-self: auto;
+              -ms-flex-item-align: auto;
+              align-self: auto;
+              }
+
+          .flex-item:nth-child(3) {
+              -webkit-order: 0;
+              -ms-flex-order: 0;
+              order: 0;
+              -webkit-flex: 0 1 auto;
+              -ms-flex: 0 1 auto;
+              flex: 0 1 auto;
+              -webkit-align-self: auto;
+              -ms-flex-item-align: auto;
+              align-self: auto;
+              }
+              .flex-container1 {
+                display: -ms-flexbox;
+                display: -webkit-flex;
+                display: flex;
+                -webkit-flex-direction: row;
+                -ms-flex-direction: row;
+                flex-direction: row;
+                -webkit-flex-wrap: nowrap;
+                -ms-flex-wrap: nowrap;
+                flex-wrap: nowrap;
+                -webkit-justify-content: space-between;
+                -ms-flex-pack: justify;
+                justify-content: space-between;
+                -webkit-align-content: stretch;
+                -ms-flex-line-pack: stretch;
+                align-content: stretch;
+                -webkit-align-items: flex-start;
+                -ms-flex-align: start;
+                align-items: flex-start;
+                }
+
+            .flex-item:nth-child(1) {
+                -webkit-order: 0;
+                -ms-flex-order: 0;
+                order: 0;
+                -webkit-flex: 0 1 auto;
+                -ms-flex: 0 1 auto;
+                flex: 0 1 auto;
+                -webkit-align-self: auto;
+                -ms-flex-item-align: auto;
+                align-self: auto;
+                }
+
+            .flex-item:nth-child(2) {
+                -webkit-order: 0;
+                -ms-flex-order: 0;
+                order: 0;
+                -webkit-flex: 0 1 auto;
+                -ms-flex: 0 1 auto;
+                flex: 0 1 auto;
+                -webkit-align-self: auto;
+                -ms-flex-item-align: auto;
+                align-self: auto;
+                }
+
+            .flex-item:nth-child(3) {
+                -webkit-order: 0;
+                -ms-flex-order: 0;
+                order: 0;
+                -webkit-flex: 0 1 auto;
+                -ms-flex: 0 1 auto;
+                flex: 0 1 auto;
+                -webkit-align-self: auto;
+                -ms-flex-item-align: auto;
+                align-self: auto;
+                }
 
 
     /* Estado Carrito */
+
+.modal{background-color: rgba(11, 97, 0, 0); padding: 10px 10px 0px 10px; border-bottom:0px}
+
+
 
     @media  (max-width: 1000px){
 
@@ -86,7 +228,14 @@ ul{margin:0px; padding:0px;}
     @media  (max-width: 1000px){
         .carritoMargenCorreccion2{margin-right:50px!important}
         .correccion5{margin-right: 10px!important;}
+
+        /* SE ACOMODAN LOS MARGENES DE EL FACE Y EL CLIMA */
+        .facebook{color:#f1f1f1; margin-left:10px;}
+        .clima{margin-top:-6px; margin-right: 0px;}
+        .margeleftLogo{margin-left:-190px}
     }
+
+    .mat-menu-item{width: 100vh; outline: none;font-family: 'Exo 2', sans-serif; font-size: 18px;}
 
     @media  (max-width: 794px){
         .carritoMargenCorreccion{margin-right:0px!important}
@@ -98,6 +247,11 @@ ul{margin:0px; padding:0px;}
         .carritoMargenCorreccion{margin-right:0px!important}
         .quitar1{display:none!important}
         .contenedorNavbar{border-radius:0px!important; height: 50px;}
+        .barraTopColor{margin-top:75px}
+        .noneDesktop{display: block;}
+        .contenedorNavbar{display: none;}
+        .poner600{display:block}
+        .quepasa{display:block}
     }
 
     @media  (max-width: 1000px){
