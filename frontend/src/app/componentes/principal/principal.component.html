@@ -4,7 +4,7 @@
   <div *ngIf="testLoading" class="loaderClass" align="center"  >
     <div>
       <div class="lds-facebook"><div></div><div></div><div></div></div>
-
+        <h5 style="margin-top:-10px">Cargado..</h5>
   </div>
 </div>
 <div  class="correccion1 divPrincipal" >
@@ -28,41 +28,6 @@
                           </div>
 
 
-                  <app-separador [data]="'Música'"></app-separador>
-
-                  <div class="row" style="margin-right:0px; margin-top:-5px">
-                    <div *ngFor='let producto of productos|filtro:"Musica" ' class="col-12 col-sm-6 col-md-6 col-lg-4 col-xl-4" style="margin-top:20px; margin-left:-0px;">
-
-                        <div class="desktopHide">
-                           <app-bajoportada  [data]='producto' ></app-bajoportada>
-                       </div>
-
-                         <div class="desktopVisble">
-                           <app-bajo-portada-mobile [data]='producto'></app-bajo-portada-mobile>
-                         </div>
-
-                     </div>
-
-                 </div>
-
-<!-- Categoria -->
-                 <app-separador [data]="'Teatro'"></app-separador>
-
-                 <div class="row" style="margin-right:0px; margin-top:-20px">
-                   <div *ngFor='let producto of productos|filtro:"Teatro" ' class="col-12 col-sm-6 col-md-6 col-lg-4 col-xl-4" style="margin-top:20px; margin-left:-0px;">
-
-                       <div class="desktopHide">
-                          <app-bajoportada  [data]='producto' ></app-bajoportada>
-                      </div>
-
-                        <div class="desktopVisble">
-                          <app-bajo-portada-mobile [data]='producto'></app-bajo-portada-mobile>
-                        </div>
-
-                    </div>
-
-                </div>
-
 <!-- Categoria -->
 <!-- Categoria -->
 <app-separador [data]="'Radios'"></app-separador>
@@ -83,6 +48,42 @@
 </div>
 
 <!-- Categoria -->
+
+<app-separador [data]="'Música'"></app-separador>
+
+<div class="row" style="margin-right:0px; margin-top:-5px">
+  <div *ngFor='let producto of productos|filtro:"Musica" ' class="col-12 col-sm-6 col-md-6 col-lg-4 col-xl-4" style="margin-top:20px; margin-left:-0px;">
+
+      <div class="desktopHide">
+         <app-bajoportada  [data]='producto' ></app-bajoportada>
+     </div>
+
+       <div class="desktopVisble">
+         <app-bajo-portada-mobile [data]='producto'></app-bajo-portada-mobile>
+       </div>
+
+   </div>
+
+</div>
+
+<!-- Categoria -->
+<app-separador [data]="'Teatro'"></app-separador>
+
+<div class="row" style="margin-right:0px; margin-top:-20px">
+ <div *ngFor='let producto of productos|filtro:"Teatro" ' class="col-12 col-sm-6 col-md-6 col-lg-4 col-xl-4" style="margin-top:20px; margin-left:-0px;">
+
+     <div class="desktopHide">
+        <app-bajoportada  [data]='producto' ></app-bajoportada>
+    </div>
+
+      <div class="desktopVisble">
+        <app-bajo-portada-mobile [data]='producto'></app-bajo-portada-mobile>
+      </div>
+
+  </div>
+
+</div>
+
 <!-- Categoria -->
 <app-separador [data]="'Libros  '"></app-separador>
 
@@ -115,7 +116,7 @@
 
 
                   <div *ngIf ="!testLoading" class="col-12 col-sm-12 col-md-12 col-lg-3 col-xl-3 desktopHide" style="background-color: white; border-radius: 5px; margin-right: 0px!important; padding-right: 15px; ">
-                  <app-lateral [data]='productos'></app-lateral>
+                  <app-lateral [data]='productos|filtrox4'></app-lateral>
 
 
                   </div>       <!-- fin de colo -->

@@ -7,11 +7,11 @@
 
 
 <div class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-9">
-        <h5 style="font-family: 'Exo 2', sans-serif; color:green"><b> #{{nota.hash}}</b></h5>
+        <h5 class="hash"><b> #{{nota.hash}}</b></h5>
         <div style="margin-top:-10px">
-        <h1 style="font-size: 45px;">{{nota.titulo}}</h1>
+        <h1>{{nota.titulo}}</h1>
     </div>
-        <h4 style="font-size: 19px;"  [innerHTML]=saltos(nota.subtitulo)></h4>
+        <h4 class="sub"  [innerHTML]=saltos(nota.subtitulo)></h4>
 <hr>
         <div style="display: flex; justify-content: left; margin-left:25px; margin-top:-0px ; margin-bottom:0px; ">
             <div>
@@ -50,7 +50,7 @@
         <app-imagen-loading class="desktopHide" [image]="urlImage" style="width: 100%; border-radius: 4px; object-fit: cover"></app-imagen-loading>
       </div>
 <div>
-  <app-imagen-loading  class="desktopVisble" [image]="urlImage2" style="width: 100%; border-radius: 4px; object-fit: cover"></app-imagen-loading>
+  <app-imagen-loading  class="desktopVisble" [image]="urlImage" style="width: 100%; border-radius: 4px; object-fit: cover"></app-imagen-loading>
 
 </div>
 
@@ -81,11 +81,10 @@
             <div>
 
 
-<!--
+
                 <div  style="display:flex ; align-items: flex-start; margin-top:-5px; margin-left:-10px; margin-right: 5px" >
-                    <mat-icon class="mr-corre mr-2 ml-2 "style="font-size:19px; color:rgb(145,145,145)">calendar_today</mat-icon>
-                     <div>
-                             <h3 class="subtituloResposive2 " style="font-size:11px;  margin-top:-3px; margin-left: -10px;  color:rgb(0, 0, 0)">{{nota.fecha|date:'dd/MM/yyyy'}}</h3>
+                                         <div>
+
                      </div>
                 </div>
 
@@ -94,7 +93,7 @@
             <div style="margin-top:0px; margin-right: 10px;">
 
                 <div *ngIf=(nota.descripcion)  style="display:flex ; align-items: flex-start; margin-top:-5px; margin-right: 5px" >
-                    <mat-icon class="mr-2"style="font-size:19px; color:gray">like</mat-icon>
+
                      <div>
 
                      </div>
@@ -104,16 +103,16 @@
             <div style="margin-top:0px; margin-right: 10px;">
 
                     <div *ngIf=(nota.descripcion)  style="display:flex ; align-items: flex-start; margin-top:-5px; margin-right: 5px" >
-                        <mat-icon class="mr-2"style="font-size:19px; color:gray">visibility</mat-icon>
+
                          <div>
-                                 <h3  class="subtituloResposive2" style="font-size:11px; margin-top:-3px; margin-left: -10px;  color:gray">{{nota.vistas}}</h3>
+
                          </div>
                     </div>
-                </div> -->
+                </div>
 
 
             </div>
-            <hr style="margin-top:-10px">
+
 
 
 </div>
@@ -121,7 +120,7 @@
 
  <div class="col-sm-12 col-md-12 col-lg-12 col-xl-3 desktopHide" style="background-color: rgb(255, 255, 255);">
      <!-- <h5>tiendas virtuales</h5>  -->
-         <app-lateral [data]="this.productos"></app-lateral>
+         <app-lateral [data]="this.productos|filtro:this.nota.categoria"></app-lateral>
 </div>
 
 

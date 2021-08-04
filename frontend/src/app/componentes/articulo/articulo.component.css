@@ -1,22 +1,20 @@
 @import url('https://fonts.googleapis.com/css2?family=Oswald&family=Rubik:wght@300&display=swap');
 
+@import url('https://fonts.googleapis.com/css2?family=Patua+One&family=Roboto&display=swap');
 
 .margenGeneral{margin-top:20px; margin-left: 250px; margin-right: 250px}
 
+.hash{font-family: 'Exo 2', sans-serif; color:green;  font-size: 16px;}
 
 h1{
-    font-family: 'Oswald', sans-serif; font-size: 40px; line-height: 45px;
-    text-shadow:1px 1px 1px rgb(219, 219, 219);
+     font-size: 35px; line-height: 45px;
+    font-family: 'Patua One', cursive;
+
 
 }
+.sub{font-size: 18px; line-height: 26px; margin-top:-5px; }
 
 p{ font-size: 18px ; margin-top:30px}
-
-h4{font-size: 15px!important; margin-top:-5px; line-height: 20px;}
-
-h5{color:rgb(70, 156, 0); font-size: 13px;
-
-}
 
 
 .desktopVisble{display: none}
@@ -44,10 +42,11 @@ h5{color:rgb(70, 156, 0); font-size: 13px;
   @media  (max-width: 600px){
     .desktopVisble{display: block}
     .desktopHide{display:none!important}
-
-    h1{font-size: 30px!important;     line-height: 35px!important; margin-top:-15px}
-    h5{color:rgb(145, 145, 145); font-size: 12px!important}
+    .sub{font-size: 18px; line-height: 24px;}
+    h1{font-size: 26px!important; line-height: 30px!important; margin-top:-10px}
+    h5{font-size: 14px!important}
     .margenGeneral{margin-top:90px}
+    .hash{font-family: 'Exo 2', sans-serif; color:green}
 }
 
 

@@ -20,7 +20,10 @@
 }
 
 .descripcion{font-size: 13px;
-    color:rgb(95, 95, 95);margin-right: 5px;margin-top:-10px;
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    color:rgb(95, 95, 95);margin-right: 5px;
+    margin-top:-10px;
+    line-height: 18px;
 }
 
 .sombra{ -webkit-box-shadow: 7px 10px 19px -4px rgba(0,0,0,0.75);

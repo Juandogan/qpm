@@ -42,7 +42,7 @@ this.crudService.scrolled = false
   this.urlImage = "https://www.quepasamiramar.com.ar/upload/" + this.cut(this.nota.imagen1)
   this.urlImage2 = "https://www.quepasamiramar.com.ar/upload/" + this.cut(this.nota.imagen2)
   this.fecha = this.crudService.fechaPipe(new Date(this.nota.fecha))
-  this.ruta.data.subscribe((data)=>{this.productos = data.dataLateral, console.log('qqq',data.dataLateral), this.crudService.loading=false} )
+  this.ruta.data.subscribe((data)=>{this.productos = data.dataLateral, console.log('data lateral',data.dataLateral), this.crudService.loading=false} )
 
 
 

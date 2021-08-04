@@ -4,7 +4,7 @@
     <div class="col-4" style="margin: 0px; padding:0px ; padding-right: 10px;">
         <div style="margin-top:10px">
           <a matRipple [matRippleColor]="color" style="color:black" routerLink="../articulo/{{nota._id}}" (click)="agregarVista(nota)" >
-            <img src="https://www.quepasamiramar.com.ar/upload/{{this.crudService.cut(nota.imagen2)}}" alt="" style="width: 100%; height: 106px; border-radius: 5px; object-fit: cover;">
+            <img src="https://www.quepasamiramar.com.ar/upload/{{this.crudService.cut(nota.imagen2)}}" alt="" style="width: 100%; height: 116px; border-radius: 5px; object-fit: cover;">
           </a>
 <!--
             <app-image-with-loading image="http://192.168.43.55:3000/upload/{{this.crudService.cut(nota.imagen1)}}"
@@ -19,7 +19,7 @@
         <h1 class="fuenteTitulo truncarTitulo" >{{nota.titulo}}</h1>
 
         </a>
-<p class="fuenteTitulo2 truncar4" style="margin-top:-15px">{{nota.subtitulo}}</p>
+<p class="fuenteTitulo2 truncar4">{{nota.subtitulo}}</p>
 
 
 

@@ -16,7 +16,7 @@
 .truncar4 {
 
     display: -webkit-box;
-    -webkit-line-clamp: 2;
+    -webkit-line-clamp: 3;
     -webkit-box-orient: vertical;
     overflow-wrap: break-word;
     overflow: hidden;/*si no se declara añade los ... pero muestra todo el texto*/
@@ -39,10 +39,9 @@
 
 .fuenteTitulo2{
     font-size: 12px;
-
+    margin-top:-12px;
     color:rgb(116, 116, 116);
      margin-left:0px;
-     margin-top:10px;
      margin-right:10px;
      line-height: 15px
 };

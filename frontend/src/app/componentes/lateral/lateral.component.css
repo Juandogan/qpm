@@ -19,6 +19,15 @@
 
       }
 
+      .truncar4 {
+
+        display: -webkit-box;
+        -webkit-line-clamp: 3;
+        -webkit-box-orient: vertical;
+        overflow-wrap: break-word;
+        overflow: hidden;/*si no se declara añade los ... pero muestra todo el texto*/
+      }
+
       .ajusteMargenes{margin-left:5px; margin-right: 5px;}
       .subtitulo{
         color: rgb(20, 20, 20);

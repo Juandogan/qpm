@@ -26,52 +26,14 @@ const multiPartMiddleware = multipart({
 
 });
 
-
-
-const serverHttp = require('http').Server(serverSocketIo);
-const io = require('socket.io')(serverHttp);
-serverHttp.listen(  3001, () =>{
-console.log('***** SocketIO port: 3001')
-        
-    })
          
     
 // CONFIG SOCKET.IO     
-const ordenSocketIo=[]; //  recibe data desde comunicacion.serivce.ts (funciones emit(), liten()) son llamadas x productos.component funcion: formEdit()                                                    
-const ordenStateMongo=[];
-       
-io.on('connection', function(socket){    // abre cnx no recibe data
-        socket.on('send-cxn', function(data){  //Llega pedido desde            
-        socket.emit('text-event',ordenSocketIo)     
-        socket.broadcast.emit('text-event',ordenSocketIo)
-   })  
-         
-        socket.on('send-message', function(data){
-        ordenSocketIo.push(data);
-        socket.emit('text-event',ordenSocketIo)
-        socket.broadcast.emit('text-event',ordenSocketIo)
-    })
-     
-    socket.on('send-messageEstado', function(index,estado){
-        ordenSocketIo.reverse()
-            for(var x = 0 ; x < ordenSocketIo.length;  x++ ) {
-              
-            ordenSocketIo[index].estado = estado
-            
-        }
-        ordenSocketIo.reverse()
-        socket.emit('text-event',ordenSocketIo)
-        socket.broadcast.emit('text-event',ordenSocketIo)
-    })
-   
-            
-})      
-  
 
     
 // CREATE API
 
-app.set('port', process.env.PORT || 3000);  // tomo app e nsu propiedad .set  // paso "port" y process.env.PORT (escucha puerto por defecto)
+app.set('port', process.env.PORT || 3001);  // tomo app e nsu propiedad .set  // paso "port" y process.env.PORT (escucha puerto por defecto)
 // sino usa el 3000
 
 // Midlewares
@@ -108,7 +70,7 @@ app.get('*', function(req, res, next)
 
 
 
-const PUERTO = 3000 ;
+const PUERTO = 3002 ;
 
 // Starting server  
 // https.createServer({
