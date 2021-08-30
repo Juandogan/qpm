@@ -114,8 +114,8 @@ buscar(value: string){
     }
     };
 
-     publiForm(publi){
-      this.publi2 = publi
+     publiForm(data){
+      this.publi2 = data
 
         }
 
@@ -126,6 +126,28 @@ buscar(value: string){
 
 
           switch (value) {
+
+
+            case 'Lateral':
+              this.tituloShow=true;
+              this.subtituloShow=true;
+              this.imagenShow=true;
+              this.archivoShow=true;
+              this.descripcionShow =true;
+              this.autorShow=true;
+             this.tituloImagenShow = true;
+             this.fechaShow =true
+             break;
+            case 'Musica':
+              this.tituloShow=true;
+              this.subtituloShow=true;
+              this.imagenShow=true;
+              this.archivoShow=true;
+              this.descripcionShow =true;
+              this.autorShow=true;
+             this.tituloImagenShow = true;
+             this.fechaShow =true
+             break;
                case 'Radios':
                 this.cerrarForm()
                 this.tituloShow=true;
@@ -182,7 +204,7 @@ buscar(value: string){
                this.fechaShow =true
                    break;
 
-                   case 'Tienda Virtual':
+                   case 'Musica':
                    this.tituloShow=true;
                    this.subtituloShow=true;
                    this.imagenShow=true;
@@ -213,6 +235,27 @@ buscar(value: string){
             this.crudService.unProducto = producto
             this.crudService.unProducto.categoria = producto.categoria
             switch (producto.categoria) {
+
+            case 'Lateral':
+              this.tituloShow=true;
+              this.subtituloShow=true;
+              this.imagenShow=true;
+              this.archivoShow=true;
+              this.descripcionShow =true;
+              this.autorShow=true;
+             this.tituloImagenShow = true;
+             this.fechaShow =true
+             break;
+            case 'Musica':
+              this.tituloShow=true;
+              this.subtituloShow=true;
+              this.imagenShow=true;
+              this.archivoShow=true;
+              this.descripcionShow =true;
+              this.autorShow=true;
+             this.tituloImagenShow = true;
+             this.fechaShow =true
+             break;
               case 'Radios':
                 this.cerrarForm()
                 this.tituloShow=true;

@@ -48,16 +48,10 @@ export class PrincipalComponent implements OnInit, OnDestroy{
     var az = Number(localStorage.getItem('pedidos'))
 
      window.scrollTo(0,az);
-  //   this.clientes$.subscribe(data => {
-  //    this.scroll = Number(data)
-  //    if(this.scroll > 120 ){this.crudService.scrolled = false}
-
-
-  // });
-
-
-
-
+     this.clientes$.subscribe(data => {
+     this.scroll = Number(data)
+     if(this.scroll > 120 ){this.crudService.scrolled = false}
+   });
 
 
 })

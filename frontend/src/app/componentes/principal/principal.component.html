@@ -1,5 +1,5 @@
 <!-- <div  (window:scroll)="evento($event)"> -->
-<div>
+<div  (window:scroll)="evento($event)">
 
   <div *ngIf="testLoading" class="loaderClass" align="center"  >
     <div>
@@ -16,8 +16,9 @@
                       <br>
                       <!-- <app-footer [data]='producto'></app-footer> -->
                 <app-separador [data]="'Últimas Novedades'"></app-separador>
-                        <div class="row" style="margin-right:0px; margin-top:-5px">
-                             <div *ngFor='let producto of productos|filtrox4 ' class="col-12 col-sm-6 col-md-6 col-lg-4 col-xl-4" style="margin-top:20px; margin-left:-0px;">
+
+                        <div class="row" style="margin-right:0px; margin-top:-25px">
+                             <div *ngFor='let producto of productos|filtro:"Nota" |filtrox4 ' class="col-12 col-sm-6 col-md-6 col-lg-4 col-xl-4" style="margin-top:20px; margin-left:-0px;">
                                  <div class="desktopHide">
                                     <app-bajoportada  [data]='producto' ></app-bajoportada>
                                 </div>
@@ -33,7 +34,7 @@
 <app-separador [data]="'Radios'"></app-separador>
 
 <div class="row" style="margin-right:0px; margin-top:-20px">
-  <div *ngFor='let producto of productos|filtro:"Radio" ' class="col-12 col-sm-6 col-md-6 col-lg-4 col-xl-4" style="margin-top:20px; margin-left:-0px;">
+  <div *ngFor='let producto of productos|filtro:"Radio" |filtrox4' class="col-12 col-sm-6 col-md-6 col-lg-4 col-xl-4" style="margin-top:20px; margin-left:-0px;">
 
       <div class="desktopHide">
          <app-bajoportada  [data]='producto' ></app-bajoportada>
@@ -116,7 +117,7 @@
 
 
                   <div *ngIf ="!testLoading" class="col-12 col-sm-12 col-md-12 col-lg-3 col-xl-3 desktopHide" style="background-color: white; border-radius: 5px; margin-right: 0px!important; padding-right: 15px; ">
-                  <app-lateral [data]='productos|filtrox4'></app-lateral>
+                  <app-lateral [data]='productos|lateral|filtrox4 '></app-lateral>
 
 
                   </div>       <!-- fin de colo -->

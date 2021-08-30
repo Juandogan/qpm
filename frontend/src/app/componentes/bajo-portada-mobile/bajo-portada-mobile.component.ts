@@ -18,6 +18,14 @@ export class BajoPortadaMobileComponent implements OnInit {
   }
 
 
+  saltos(data){
+
+    var aux2 = data.split('style="width:100%"').join(' width="100%"')
+    return aux2
+
+
+   };
+
 
  agregarVista(value){
   this.crudService.unProducto = value

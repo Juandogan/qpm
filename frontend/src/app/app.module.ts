@@ -15,6 +15,8 @@ import {MatIconModule} from '@angular/material/icon';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import {MatBadgeModule} from '@angular/material/badge';
+import {MatSnackBarModule} from '@angular/material/snack-bar';
+
 
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { NavbarComponent } from './componentes/navbar/navbar.component';
@@ -50,6 +52,7 @@ import { LoadingImageLateralComponent } from './componentes/loading-image-latera
 import { FooterFechaComponent } from './componentes/footer-fecha/footer-fecha.component';
 import { ImagenLoadingComponent } from './componentes/imagen-loading/imagen-loading.component';
 import { SeparadorComponent } from './componentes/separador/separador.component';
+import { LateralPipe } from './pipes/lateral.pipe';
 
 
 
@@ -83,6 +86,7 @@ import { SeparadorComponent } from './componentes/separador/separador.component'
     FooterFechaComponent,
     ImagenLoadingComponent,
     SeparadorComponent,
+    LateralPipe,
 
   ],
   imports: [
@@ -99,7 +103,8 @@ import { SeparadorComponent } from './componentes/separador/separador.component'
     MatBadgeModule,
     MatRippleModule,
     CKEditorModule,
-    MatMenuModule
+    MatMenuModule,
+    MatSnackBarModule
 
   ],
   providers: [CrudService, ResolveNotaService, ResolveLateralService],

@@ -60,9 +60,10 @@ height: 50px;
     height: 20px;
 
                   }
+                  /* img  {transition: all 0.2s ease;  } */
 
 .imgScroll{display: none; }
-
+.acomoda{margin-top:0px!important}
 
 /* Estilos Menu Navbar*/
 ul{margin:0px; padding:0px;margin-left: 10px}
@@ -74,6 +75,7 @@ ul{margin:0px; padding:0px;margin-left: 10px}
 
 .menuTexto {
         margin-top: 6px!important;
+        letter-spacing: 0.5px;
         font-size: 20px;
         font-family: 'Bebas Neue', cursive;
         text-decoration: none;

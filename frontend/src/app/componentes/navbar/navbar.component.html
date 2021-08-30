@@ -2,12 +2,13 @@
 <!-- CABECERA  -->
 <div class="fixed-top text-left noneDesktop">
 <a routerLink='/'>
-  <img  src="../../../assets/LogoQPM.png" alt="" width="150px">
+
+  <img  [ngClass]="{'imgScroll':this.crudService.scrolled}" src="../../../assets/LogoQPM.png" alt="" width="150px" >
   </a>
 </div>
 
 
-<div class="flex-container1 barraTopColor fixed-top">
+<div class="flex-container1 barraTopColor fixed-top"  [ngClass]="{'acomoda':this.crudService.scrolled}">
 
   <div class="flex-container" >
   <mat-icon class="facebook quitar1">facebook</mat-icon>
@@ -17,12 +18,12 @@
     <mat-icon class="IconoBusAcomodo mr-1 poner600" [matMenuTriggerFor]="menu"> stars</mat-icon>
 <mat-menu #menu="matMenu"  yPosition="below">
   <button mat-menu-item routerLink="/"><mat-icon>home</mat-icon>Inicio (22)</button>
-<!--
+
   <button mat-menu-item><mat-icon>facebook</mat-icon>Últimas novedades (22)</button>
-  <button mat-menu-item><mat-icon>audiotrack</mat-icon>Musica</button>
-  <button mat-menu-item><mat-icon>theater_comedy</mat-icon> Teatro</button>
-  <button mat-menu-item>Inistitucionales</button>
-  <button mat-menu-item>Productores Locales</button> -->
+  <button mat-menu-item><mat-icon>audiotrack</mat-icon>Música</button>
+  <button mat-menu-item><mat-icon>theater_comedy</mat-icon>Teatro</button>
+  <button mat-menu-item>Institucionales</button>
+  <button mat-menu-item>Productores Locales</button>
 
 </mat-menu>
     <!--
@@ -87,10 +88,10 @@
                   <a class="menuTexto" >
                         <!-- <mat-icon style="float:left; margin-top:4px; margin-right: 0px" >stars</mat-icon> -->
                          <span [routerLinkActive]="'activo'" [routerLinkActiveOptions]="{exact:  true}" routerLink='/' class="quitar1 menuTexto mt-1">PORTADA</span>
-                         <!-- <span class="quitar1 menuTexto mt-1 ml-2"> MUSICA</span>
-                         <span class="quitar1 menuTexto mt-1 ml-2"> Teatro</span>
-                         <span class="quitar1 menuTexto mt-1 ml-2"> Turismo</span>
-                         <span class="quitar1 menuTexto mt-1 ml-2"> Institucional</span> -->
+                          <span class="quitar1 menuTexto mt-1 ml-3"> MUSICA</span>
+                         <span class="quitar1 menuTexto mt-1 ml-3"> Teatro</span>
+                         <span class="quitar1 menuTexto mt-1 ml-3"> Turismo</span>
+                         <span class="quitar1 menuTexto mt-1 ml-3"> Institucional</span>
                         </a>
                       <div>
                         <app-player></app-player>

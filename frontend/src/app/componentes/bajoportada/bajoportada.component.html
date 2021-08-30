@@ -20,7 +20,7 @@
               </div>
                <!-- <p class="card-text fuenteTitulo2" style="color:white; font-size: 14px">Some quick example text to build on the card title</p>  -->
               <!-- <a href="#" class="btn btn-small" style="background-color: orange; color:black">Ver más</a> -->
-            <p class="descripcion text4">{{nota.subtitulo}} </p>
+            <p class="descripcion text4" [innerHTML]=nota.subtitulo></p>
 
 
        <app-footer-fecha [data]='nota' > </app-footer-fecha>

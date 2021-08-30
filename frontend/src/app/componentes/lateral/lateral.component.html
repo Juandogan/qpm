@@ -1,7 +1,7 @@
 
 
 
-<div *ngFor="let producto of nota; let i = index " class="card text-white mb-3 forFiltro" >
+<div *ngFor="let producto of nota|lateral; let i = index " class="card text-white mb-3 forFiltro" >
 
         <div class="card-body divGeneral">
           <a style="color:rgb(255, 255, 255)" routerLink="../articulo/{{producto._id}}" (click)="agregarVista(nota)">

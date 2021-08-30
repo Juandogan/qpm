@@ -2,6 +2,7 @@ import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Producto } from '../modelos/producto';
 import { Location } from '@angular/common';
+import {MatSnackBar} from '@angular/material/snack-bar';
 import * as moment from 'moment'
 import { of } from "rxjs"
 
@@ -20,7 +21,7 @@ export class CrudService {
   loading=true;
   scrolled :boolean = false;
   scrollObserver$ = of(1)
-  constructor(private http:HttpClient,  private location:Location) {
+  constructor(private http:HttpClient,  private location:Location, private snackBar: MatSnackBar) {
 
     this.unProducto = new Producto();
 
@@ -55,6 +56,7 @@ export class CrudService {
   };
 
   addProducto(productos:Producto) {
+    this.snack('holasa')
     return this.http.post(this.URL_API, productos);
 
 
@@ -102,6 +104,11 @@ if( dias > 59){
 
 return dias +'m'
 }
+
+
+snack(value:any){
+   this.snackBar.open(value,'',{duration:1000, horizontalPosition:'center', verticalPosition:'bottom',   panelClass: ['blue-snackbar']})
+ }
  };
 
 

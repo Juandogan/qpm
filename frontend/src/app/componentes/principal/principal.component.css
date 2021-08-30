@@ -52,6 +52,7 @@
       h2{line-height: 20px; margin-top:-10px}
       .as{margin-left:100px; margin-right: 100px;}
       .loader{width:25%}
+      .margenMobile{margin-top:20px; margin-left:-0px;}
 
       @media  (max-width: 1000px){
 
@@ -70,4 +71,5 @@
       .separadorDesktop{margin-bottom: 0px  ;}
       .divPrincipal{margin-top:215px}
       .popo{ margin-top:-10px}
+      .margenMobile{margin-top:0px}
     }

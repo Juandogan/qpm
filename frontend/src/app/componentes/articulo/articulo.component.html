@@ -47,10 +47,10 @@
             </div>
 
 <div>
-        <app-imagen-loading class="desktopHide" [image]="urlImage" style="width: 100%; border-radius: 4px; object-fit: cover"></app-imagen-loading>
+        <app-imagen-loading class="desktopHide" [image]="urlImage" style="width: 100%; border-radius: 4px; object-fit: cover; border-radius: 10px;"></app-imagen-loading>
       </div>
 <div>
-  <app-imagen-loading  class="desktopVisble" [image]="urlImage" style="width: 100%; border-radius: 4px; object-fit: cover"></app-imagen-loading>
+  <app-imagen-loading  class="desktopVisble" [image]="urlImage" style="width: 100%; border-radius: 4px; object-fit: cover; border-radius: 10px"></app-imagen-loading>
 
 </div>
 
@@ -120,7 +120,7 @@
 
  <div class="col-sm-12 col-md-12 col-lg-12 col-xl-3 desktopHide" style="background-color: rgb(255, 255, 255);">
      <!-- <h5>tiendas virtuales</h5>  -->
-         <app-lateral [data]="this.productos|filtro:this.nota.categoria"></app-lateral>
+         <app-lateral [data]="this.productos|filtrox4"></app-lateral>
 </div>
 
 
