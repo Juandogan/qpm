@@ -30,6 +30,7 @@
     -moz-box-shadow: 7px 10px 19px -4px rgba(0,0,0,0.75);
     box-shadow: 7px 10px 19px -4px rgba(0,0,0,0.75);  }
 
+   .minAlt{min-height: 70px;}
 
 .fuenteTitulo2{
     font-size: 12px;
@@ -44,7 +45,7 @@
 .text4 {
 
     display: -webkit-box;
-    -webkit-line-clamp: 4;
+    -webkit-line-clamp: 3;
     -webkit-box-orient: vertical;
     overflow: hidden;
 }

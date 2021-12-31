@@ -53,6 +53,7 @@ import { FooterFechaComponent } from './componentes/footer-fecha/footer-fecha.co
 import { ImagenLoadingComponent } from './componentes/imagen-loading/imagen-loading.component';
 import { SeparadorComponent } from './componentes/separador/separador.component';
 import { LateralPipe } from './pipes/lateral.pipe';
+import { FiltroPrincipalPipe } from './pipes/filtro-principal.pipe';
 
 
 
@@ -87,6 +88,7 @@ import { LateralPipe } from './pipes/lateral.pipe';
     ImagenLoadingComponent,
     SeparadorComponent,
     LateralPipe,
+    FiltroPrincipalPipe,
 
   ],
   imports: [

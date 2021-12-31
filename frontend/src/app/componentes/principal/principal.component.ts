@@ -43,7 +43,7 @@ export class PrincipalComponent implements OnInit, OnDestroy{
     window.scrollTo(0,0)
     this.crudService.scrolled = false
 
-    const tiempo  =  timer(2000)
+    const tiempo  =  timer(1000)
     tiempo.subscribe((n)=> {this.testLoading=false;
     var az = Number(localStorage.getItem('pedidos'))
 

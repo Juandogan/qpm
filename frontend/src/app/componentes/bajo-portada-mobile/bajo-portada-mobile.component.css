@@ -37,6 +37,8 @@
     box-shadow: 7px 10px 19px -4px rgba(0,0,0,0.75);  }
 
 
+    .maxAlt{min-height: 55px;}
+
 .fuenteTitulo2{
     font-size: 12px;
     margin-top:-12px;
@@ -53,6 +55,14 @@
 .footerData{
   display: flex; justify-content: left; margin-left:0px; margin-top:-0px
 }
+
+
+
+@media (max-width:600px){
+  .fuenteTitulo{font-size: 20px;}
+
+}
+
 
 @media (max-width:370px){
 
